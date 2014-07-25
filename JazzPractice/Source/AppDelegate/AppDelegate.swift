@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-    // Override point for customization after application launch.
+    
+    window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    let rootStoryBoard = UIStoryboard(name: "SectionsCollectionViewController", bundle: nil)
+    window!.rootViewController = rootStoryBoard.instantiateInitialViewController() as UIViewController
+    window?.makeKeyAndVisible()
+    
     return true
   }
 
