@@ -1,0 +1,17 @@
+PODS:
+  - CocoaLumberjack (1.9.1):
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.9.1)
+  - CocoaLumberjack/Extensions (1.9.1):
+    - CocoaLumberjack/Core
+  - Isaac (1.1.1)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - Isaac
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 94accd5749f5c5d15134c8d50f34a973aed8ef69
+  Isaac: 4370c23390302450f06ff79e86672ed0ae638f9c
+
+COCOAPODS: 0.33.1
