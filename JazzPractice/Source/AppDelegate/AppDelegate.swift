@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
     let rootStoryBoard = UIStoryboard(name: "SectionsCollectionViewController", bundle: nil)
-    window!.rootViewController = rootStoryBoard.instantiateInitialViewController() as UIViewController
+    let rootController = rootStoryBoard.instantiateInitialViewController() as UIViewController
+    let navigationController = UINavigationController(rootViewController: rootController)
+    window!.rootViewController = navigationController
     window?.makeKeyAndVisible()
     
     return true

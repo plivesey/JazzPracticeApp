@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SheetMusicDelegate {
   
   @IBOutlet var collectionView: UICollectionView;
   
@@ -23,10 +23,19 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   }
   
   @IBAction func playTapped() {
-    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, secondsPerBeat: 0.5)
+    let sheetMusic = UIStoryboard(name: "SheetMusicViewController", bundle: nil).instantiateInitialViewController() as SheetMusicViewController
+    sheetMusic.chords = CurrentSongDataCenter.sharedInstance.currentSong[0].chords
+    sheetMusic.delegate = self
+    let navigationController = UINavigationController(rootViewController: sheetMusic)
+    presentViewController(navigationController, animated: true, completion: nil)
   }
   
   @IBAction func stopTapped() {
-    JukeBox.sharedInstance.stopMusic()
+    
+  }
+  
+  // Sheet music delegate
+  func sheeMusicFinished(_: SheetMusicViewController) {
+    dismissViewControllerAnimated(true, completion: nil)
   }
 }
