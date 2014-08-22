@@ -21,7 +21,7 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
   var playButton: UIBarButtonItem!
   var playing = false
   
-  @IBOutlet var collectionView: UICollectionView;
+  @IBOutlet var collectionView: UICollectionView!;
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,7 +37,7 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, secondsPerBeat: 0.5)
+    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, secondsPerBeat: 0.7)
     playing = true
   }
   
@@ -51,7 +51,7 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
       JukeBox.sharedInstance.stopMusic()
       playButton.title = "Play"
     } else {
-      JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, secondsPerBeat: 0.5)
+      JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, secondsPerBeat: 0.7)
       playButton.title = "Stop"
     }
     playing = !playing
@@ -64,17 +64,8 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
   func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ChordCell", forIndexPath: indexPath) as ChordCell
     
-    var text = ""
     let chordMeasure = chords[indexPath.row]
-    for (chordIndex, chord) in enumerate(chordMeasure.chords) {
-      if chordIndex > 0 {
-        
-        text += "- "
-      }
-      text += "\(chord.chord) "
-    }
-    
-    cell.textLabel.text = text
+    cell.textLabel.text = "\(chordMeasure)"
     
     return cell
   }

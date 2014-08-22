@@ -18,7 +18,7 @@ class CurrentSongDataCenter {
         static var instance : CurrentSongDataCenter? = nil
       }
       
-      if !StaticMusicPlayerContainer.instance {
+      if StaticMusicPlayerContainer.instance == nil {
         StaticMusicPlayerContainer.instance = CurrentSongDataCenter()
       }
       

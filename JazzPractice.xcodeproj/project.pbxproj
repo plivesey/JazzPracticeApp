@@ -12,6 +12,10 @@
 		363B91101982F47600E09133 /* SheetMusicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */; };
 		363B91131982F51100E09133 /* ChordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363B91121982F51100E09133 /* ChordCell.xib */; };
 		363B91151982F61100E09133 /* ChordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B91141982F61100E09133 /* ChordCell.swift */; };
+		363B9119198314DB00E09133 /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B9118198314DB00E09133 /* ChordsViewController.swift */; };
+		363B911B198314F200E09133 /* SingleChordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B911A198314F200E09133 /* SingleChordViewController.swift */; };
+		363B911D198314FE00E09133 /* ChordsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B911C198314FD00E09133 /* ChordsViewController.storyboard */; };
+		363B911F1983150700E09133 /* SingleChordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B911E1983150700E09133 /* SingleChordViewController.storyboard */; };
 		36ED668E1982D535001D5C10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ED668D1982D535001D5C10 /* Images.xcassets */; };
 		36ED669A1982D535001D5C10 /* JazzPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66991982D535001D5C10 /* JazzPracticeTests.swift */; };
 		36ED66A71982D697001D5C10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66A51982D697001D5C10 /* ViewController.swift */; };
@@ -82,6 +86,10 @@
 		363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetMusicViewController.storyboard; sourceTree = "<group>"; };
 		363B91121982F51100E09133 /* ChordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordCell.xib; sourceTree = "<group>"; };
 		363B91141982F61100E09133 /* ChordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordCell.swift; sourceTree = "<group>"; };
+		363B9118198314DB00E09133 /* ChordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
+		363B911A198314F200E09133 /* SingleChordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleChordViewController.swift; sourceTree = "<group>"; };
+		363B911C198314FD00E09133 /* ChordsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChordsViewController.storyboard; sourceTree = "<group>"; };
+		363B911E1983150700E09133 /* SingleChordViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingleChordViewController.storyboard; sourceTree = "<group>"; };
 		36ED66811982D535001D5C10 /* JazzPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ED66851982D535001D5C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36ED668D1982D535001D5C10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -264,6 +272,10 @@
 			children = (
 				36ED66AD1982D9D3001D5C10 /* SectionsCollectionViewController.swift */,
 				36ED66AF1982DA26001D5C10 /* SectionsCollectionViewController.storyboard */,
+				363B9118198314DB00E09133 /* ChordsViewController.swift */,
+				363B911C198314FD00E09133 /* ChordsViewController.storyboard */,
+				363B911A198314F200E09133 /* SingleChordViewController.swift */,
+				363B911E1983150700E09133 /* SingleChordViewController.storyboard */,
 			);
 			path = EditingViewControllers;
 			sourceTree = "<group>";
@@ -562,6 +574,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363B911D198314FE00E09133 /* ChordsViewController.storyboard in Resources */,
 				36ED668E1982D535001D5C10 /* Images.xcassets in Resources */,
 				36ED66F61982DB27001D5C10 /* Piano.sf2 in Resources */,
 				36ED66F01982DB27001D5C10 /* drums.sf2 in Resources */,
@@ -573,6 +586,7 @@
 				36ED66B01982DA26001D5C10 /* SectionsCollectionViewController.storyboard in Resources */,
 				36ED671B1982DB27001D5C10 /* trumpet.sf2 in Resources */,
 				363B91101982F47600E09133 /* SheetMusicViewController.storyboard in Resources */,
+				363B911F1983150700E09133 /* SingleChordViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +660,7 @@
 				36ED670A1982DB27001D5C10 /* JazzMelodyGenerator2.swift in Sources */,
 				36ED671A1982DB27001D5C10 /* SongComposer.swift in Sources */,
 				363B910E1982F46B00E09133 /* SheetMusicViewController.swift in Sources */,
+				363B9119198314DB00E09133 /* ChordsViewController.swift in Sources */,
 				36ED67071982DB27001D5C10 /* TwoFiveOneChordGen.swift in Sources */,
 				36ED66F81982DB27001D5C10 /* BasslineGenerator.swift in Sources */,
 				36ED67111982DB27001D5C10 /* MusicUtil+NotePicker.swift in Sources */,
@@ -659,6 +674,7 @@
 				363B91151982F61100E09133 /* ChordCell.swift in Sources */,
 				36ED66FA1982DB27001D5C10 /* ChordFactory.swift in Sources */,
 				36ED671E1982DBF7001D5C10 /* MusicGenerator.swift in Sources */,
+				363B911B198314F200E09133 /* SingleChordViewController.swift in Sources */,
 				36ED67241982DE99001D5C10 /* CurrentSongDataCenter.swift in Sources */,
 				36ED66FC1982DB27001D5C10 /* ChordMeasure.swift in Sources */,
 				36ED66F91982DB27001D5C10 /* DrumGenerator.swift in Sources */,

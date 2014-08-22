@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZiN-Jc-ngi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--Single Chord View Controller-->
+        <scene sceneID="KmV-4z-PAq">
+            <objects>
+                <viewController id="ZiN-Jc-ngi" customClass="SingleChordViewController" customModule="JazzPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0JF-1q-eQZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="FDP-qN-RHa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TLg-EH-99l">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJt-1u-eQc">
+                                <rect key="frame" x="0.0" y="20" width="480" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="bFz-TJ-hKV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZiN-Jc-ngi" id="fg7-Wb-0fj"/>
+                                    <outlet property="delegate" destination="ZiN-Jc-ngi" id="BmW-QY-AdN"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IJt-1u-eQc" firstAttribute="leading" secondItem="TLg-EH-99l" secondAttribute="leading" id="74d-9f-Uqm"/>
+                            <constraint firstItem="IJt-1u-eQc" firstAttribute="top" secondItem="TLg-EH-99l" secondAttribute="top" constant="20" id="8p4-iX-eY2"/>
+                            <constraint firstAttribute="trailing" secondItem="IJt-1u-eQc" secondAttribute="trailing" id="k7t-6i-gw6"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="rootPickerView" destination="IJt-1u-eQc" id="1Ib-Dk-rVs"/>
+                        <outlet property="view" destination="TLg-EH-99l" id="FJF-is-hik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rC0-z4-pWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="259"/>
+        </scene>
+    </scenes>
+</document>

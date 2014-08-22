@@ -8,18 +8,42 @@
 
 import UIKit
 
-class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SheetMusicDelegate {
+class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SheetMusicDelegate, ChordsViewControllerDelegate {
+
+  required init(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+  }
   
-  @IBOutlet var collectionView: UICollectionView;
+  var editingIndex = -1
+  @IBOutlet var collectionView: UICollectionView!;
+  
+  override func viewDidLoad()  {
+    super.viewDidLoad()
+    
+    edgesForExtendedLayout = UIRectEdge.None
+  }
+  
+  override func viewWillAppear(animated: Bool)  {
+    super.viewWillAppear(animated)
+    
+    collectionView.reloadData()
+  }
   
   func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
     return CurrentSongDataCenter.sharedInstance.currentSong.count
   }
   
-  // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
   func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
     return cell
+  }
+  
+  func collectionView(collectionView: UICollectionView!, didSelectItemAtIndexPath indexPath: NSIndexPath!) {
+    let chordsViewController = UIStoryboard(name: "ChordsViewController", bundle: nil).instantiateInitialViewController() as ChordsViewController
+    chordsViewController.songSection = CurrentSongDataCenter.sharedInstance.currentSong[indexPath.row]
+    chordsViewController.delegate = self
+    editingIndex = indexPath.row
+    navigationController.pushViewController(chordsViewController, animated: true)
   }
   
   @IBAction func playTapped() {
@@ -37,5 +61,10 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   // Sheet music delegate
   func sheeMusicFinished(_: SheetMusicViewController) {
     dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  // Chords delegate
+  func chordsViewController(_: ChordsViewController, updatedSongSection: SongSection) {
+    CurrentSongDataCenter.sharedInstance.currentSong[editingIndex] = updatedSongSection
   }
 }

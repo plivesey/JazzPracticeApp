@@ -10,6 +10,6 @@ import UIKit
 
 class ChordCell: UICollectionViewCell {
 
-  @IBOutlet var textLabel: UILabel
+  @IBOutlet var textLabel: UILabel!
   
 }

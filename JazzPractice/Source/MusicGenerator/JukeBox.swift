@@ -48,7 +48,7 @@ class JukeBox {
         static var instance : JukeBox? = nil
       }
       
-      if !StaticMusicPlayerContainer.instance {
+      if StaticMusicPlayerContainer.instance == nil {
         StaticMusicPlayerContainer.instance = JukeBox()
       }
       
