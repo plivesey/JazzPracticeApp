@@ -16,6 +16,8 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
   
   var chords: [ChordMeasure] = []
   var delegate: SheetMusicDelegate?
+  var tempo: Float?
+  var muted: [Bool]?
   
   // UI
   var playButton: UIBarButtonItem!
@@ -37,7 +39,7 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, secondsPerBeat: 0.7)
+    play()
     playing = true
   }
   
@@ -51,10 +53,24 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
       JukeBox.sharedInstance.stopMusic()
       playButton.title = "Play"
     } else {
-      JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, secondsPerBeat: 0.7)
+      play()
       playButton.title = "Stop"
     }
     playing = !playing
+  }
+  
+  func play() {
+    var unwrappedTemp: Float = 0.7
+    if let tempo = tempo {
+      unwrappedTemp = Float(60) / tempo
+    }
+    
+    var unwrappedMuted = [false, false, false, false]
+    if let muted = muted {
+      unwrappedMuted = muted
+    }
+    
+    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, muted: unwrappedMuted, secondsPerBeat: unwrappedTemp)
   }
   
   func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {

@@ -10,7 +10,7 @@ import Foundation
 
 class CurrentSongDataCenter {
   
-  var currentSong = MusicGenerator.generateSections()
+  var currentSong = MusicGenerator.generateSections(key: 0, numberOfMeasures: 12)
   
   class var sharedInstance:CurrentSongDataCenter {
     get {

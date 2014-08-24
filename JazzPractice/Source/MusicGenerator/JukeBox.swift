@@ -12,14 +12,33 @@ class JukeBox {
   
   var player: PLMusicPlayer = PLMusicPlayer()
   
-  func playMusic(sections: [SongSection], secondsPerBeat: Float) {
+  func playMusic(sections: [SongSection], muted: [Bool], secondsPerBeat: Float) {
     stopMusic()
     
     let initialScore: [PLMusicPlayerNote] = []
     var currentStart: Float = 0
     let scores: [[PLMusicPlayerNote]] = sections.map {
       section in
-      let fromZero = createScore(chords: section.rhythm, melody: section.melody, bassline: section.bass, drums: section.drums, secondsPerBeat: secondsPerBeat)
+      
+      var instruments: [(music: [ChordNoteMeasure], instrument: PLMusicPlayer.InstrumentType, velocity: UInt8)] = []
+      // Piano
+      if !muted[0] {
+        instruments.append(ScoreCreator.instrumentScore(section.melody, .Piano, 80))
+      }
+      // Rhythm
+      if !muted[1] {
+        instruments.append(ScoreCreator.instrumentScore(section.rhythm, .Piano, 50))
+      }
+      // Bass
+      if !muted[2] {
+        instruments.append(ScoreCreator.instrumentScore(section.bass, .Bass, 70))
+      }
+      // Drums
+      if !muted[3] {
+        instruments.append(ScoreCreator.instrumentScore(section.drums, .Drums, 50))
+      }
+      
+      let fromZero = ScoreCreator.createScore(instruments, secondsPerBeat: secondsPerBeat)
       let adjusted: [PLMusicPlayerNote] = fromZero.map {
         (var x) in
         x.start = x.start + currentStart

@@ -10,8 +10,8 @@ import Foundation
 
 struct SongSection {
   var chords: [ChordMeasure]
-  var melody: [MelodyMeasure]
+  var melody: [ChordNoteMeasure]
   var rhythm: [ChordNoteMeasure]
-  var bass:   [MelodyMeasure]
+  var bass:   [ChordNoteMeasure]
   var drums:  [ChordNoteMeasure]
 }

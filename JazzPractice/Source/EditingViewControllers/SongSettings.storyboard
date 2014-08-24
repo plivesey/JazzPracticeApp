@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PmM-qx-ncM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Song Settings View Controller-->
+        <scene sceneID="r34-62-PXe">
+            <objects>
+                <viewController id="PmM-qx-ncM" customClass="SongSettingsViewController" customModule="JazzPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uk4-WF-6mg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rm4-hc-OPF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bmP-aW-OkK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6V-So-iay">
+                                <rect key="frame" x="0.0" y="54" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="KdV-pf-cTT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="PmM-qx-ncM" id="Bsn-HT-PVg"/>
+                                    <outlet property="delegate" destination="PmM-qx-ncM" id="YiZ-om-EuJ"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEE-Zb-2yd">
+                                <rect key="frame" x="16" y="20" width="568" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="pRc-Yl-DzJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qiS-mz-DHP">
+                                <rect key="frame" x="0.0" y="258" width="600" height="342"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PmM-qx-ncM" id="SUo-fJ-veJ"/>
+                                    <outlet property="delegate" destination="PmM-qx-ncM" id="QnJ-98-mGm"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-sq-WM4">
+                                <rect key="frame" x="16" y="224" width="568" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="5tP-1Z-zko"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qiS-mz-DHP" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" constant="-16" id="2al-I2-t0U"/>
+                            <constraint firstItem="qiS-mz-DHP" firstAttribute="top" secondItem="cFV-sq-WM4" secondAttribute="bottom" constant="8" id="7wG-tM-AGW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qiS-mz-DHP" secondAttribute="trailing" constant="-16" id="8pY-wg-w16"/>
+                            <constraint firstItem="cFV-sq-WM4" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" id="92m-ER-f8S"/>
+                            <constraint firstItem="gEE-Zb-2yd" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" id="Buj-V3-bn4"/>
+                            <constraint firstItem="gEE-Zb-2yd" firstAttribute="top" secondItem="uk4-WF-6mg" secondAttribute="bottom" id="G9m-5J-cg0"/>
+                            <constraint firstItem="cFV-sq-WM4" firstAttribute="top" secondItem="Q6V-So-iay" secondAttribute="bottom" constant="8" id="GPa-j5-xY6"/>
+                            <constraint firstItem="Rm4-hc-OPF" firstAttribute="top" secondItem="qiS-mz-DHP" secondAttribute="bottom" id="Gge-0J-F1I"/>
+                            <constraint firstItem="Q6V-So-iay" firstAttribute="top" secondItem="gEE-Zb-2yd" secondAttribute="bottom" constant="8" id="Kd2-M5-lW2"/>
+                            <constraint firstItem="qiS-mz-DHP" firstAttribute="top" secondItem="cFV-sq-WM4" secondAttribute="bottom" constant="8" id="QXl-FP-aQt"/>
+                            <constraint firstItem="cFV-sq-WM4" firstAttribute="top" secondItem="Q6V-So-iay" secondAttribute="bottom" constant="8" id="Sia-oO-rnP"/>
+                            <constraint firstItem="Q6V-So-iay" firstAttribute="top" secondItem="gEE-Zb-2yd" secondAttribute="bottom" constant="8" id="cmd-yb-sWm"/>
+                            <constraint firstItem="Q6V-So-iay" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" constant="-16" id="ex2-nO-BnK"/>
+                            <constraint firstItem="gEE-Zb-2yd" firstAttribute="trailing" secondItem="bmP-aW-OkK" secondAttribute="trailingMargin" id="fWu-si-Vaq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q6V-So-iay" secondAttribute="trailing" constant="-16" id="ud2-4o-U27"/>
+                            <constraint firstItem="cFV-sq-WM4" firstAttribute="trailing" secondItem="bmP-aW-OkK" secondAttribute="trailingMargin" id="xSL-gX-ucL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Q6V-So-iay" id="sCp-cY-zkf"/>
+                        <outlet property="tableView" destination="qiS-mz-DHP" id="kUi-Sg-QaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8V-gT-Qbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="295"/>
+        </scene>
+    </scenes>
+</document>

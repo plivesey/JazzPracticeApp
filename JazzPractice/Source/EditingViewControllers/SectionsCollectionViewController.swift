@@ -8,25 +8,56 @@
 
 import UIKit
 
-class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SheetMusicDelegate, ChordsViewControllerDelegate {
-
-  required init(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
-  }
+class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SheetMusicDelegate, ChordsViewControllerDelegate, NewSongGeneratorDelegate, SongSettingsDelegate {
   
   var editingIndex = -1
-  @IBOutlet var collectionView: UICollectionView!;
+  
+  var tempo = 120
+  var mutedTracks: [(name: String, muted: Bool)] =
+  [
+    ("Solo", false),
+    ("Rhythm", false),
+    ("Bass", false),
+    ("Drums", false)
+  ]
+  
+  @IBOutlet var collectionView: UICollectionView!
+  
+  required init(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
   
   override func viewDidLoad()  {
     super.viewDidLoad()
     
     edgesForExtendedLayout = UIRectEdge.None
+    
+    let generateButton = UIBarButtonItem(title: "Generate", style: .Plain, target: self, action: "generateTapped")
+    navigationItem.leftBarButtonItem = generateButton
+    
+    let settingsButton = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: "settingsTapped")
+    navigationItem.rightBarButtonItem = settingsButton
   }
   
   override func viewWillAppear(animated: Bool)  {
     super.viewWillAppear(animated)
     
     collectionView.reloadData()
+  }
+  
+  func generateTapped() {
+    let generateController = UIStoryboard(name: "NewSongGenerator", bundle: nil).instantiateInitialViewController() as SheetMusicViewController
+    generateController.delegate = self
+    let navigationController = UINavigationController(rootViewController: generateController)
+    presentViewController(navigationController, animated: true, completion: nil)
+  }
+  
+  func settingsTapped() {
+    let settingsViewController = UIUtils.viewControllerNamed("SongSettings") as SongSettingsViewController
+    settingsViewController.tempo = tempo
+    settingsViewController.mutedTracks = mutedTracks
+    settingsViewController.delegate = self
+    presentViewController(UINavigationController(rootViewController: settingsViewController), animated: true, completion: nil)
   }
   
   func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
@@ -50,6 +81,10 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
     let sheetMusic = UIStoryboard(name: "SheetMusicViewController", bundle: nil).instantiateInitialViewController() as SheetMusicViewController
     sheetMusic.chords = CurrentSongDataCenter.sharedInstance.currentSong[0].chords
     sheetMusic.delegate = self
+    sheetMusic.tempo = Float(tempo)
+    sheetMusic.muted = mutedTracks.map { instrument in
+      return instrument.muted
+    }
     let navigationController = UINavigationController(rootViewController: sheetMusic)
     presentViewController(navigationController, animated: true, completion: nil)
   }
@@ -66,5 +101,18 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   // Chords delegate
   func chordsViewController(_: ChordsViewController, updatedSongSection: SongSection) {
     CurrentSongDataCenter.sharedInstance.currentSong[editingIndex] = updatedSongSection
+  }
+  
+  // Generate delegate
+  func songGeneratorGeneratedNewSong(songGenerator: NewSongGeneratorViewController) {
+    dismissViewControllerAnimated(true, completion: nil)
+    collectionView.reloadData()
+  }
+  
+  // Song settings delegate
+  func songSettingsViewController(viewController: SongSettingsViewController, finishedWithTempo tempo: Int, mutedTracks: [(name: String, muted: Bool)]) {
+    self.tempo = tempo
+    self.mutedTracks = mutedTracks
+    self .dismissViewControllerAnimated(true, completion: nil)
   }
 }
