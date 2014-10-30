@@ -31,12 +31,25 @@ class JukeBox {
       case .AABB:
         return [song.sections[0], song.sections[0], song.sections[1], song.sections[1]]
       }
-    }()
+      }()
     
     var sections = [SongSection]()
     for _ in 0..<song.repeat {
       sections.extend(oneRepeatSections)
     }
+    
+    let endingSection: SongSection = {
+      let endingChord = song.sections[0].chords[0]
+      let lastNote = song.sections[0].melody[0].notes[0].note
+      let melody = JazzMelodyGenerator.generateFinalRestingMeasure(closeToEndNote: lastNote, chord: endingChord.chords[0].chord)
+      let rhythm = RhythmSectionGenerator.endingRhythmSectionForChord(endingChord)
+      let bass = BasslineGenerator.generateEndingBassMeasure(endingChord)
+      let drums = DrumGenerator.generateDrumsEndingMeasure()
+      
+      return SongSection(chords: [endingChord], melody: [melody], rhythm: [rhythm], bass: [bass], drums: [drums])
+    }()
+    
+    sections.append(endingSection)
     
     let scores: [[PLMusicPlayerNote]] = sections.map {
       section in
@@ -68,7 +81,8 @@ class JukeBox {
       currentStart += secondsPerBeat * 4 * Float(section.chords.count)
       
       return adjusted
-      }
+    }
+    
     let score = scores.reduce(initialScore) {
       current, next in
       return current + next
@@ -93,6 +107,6 @@ class JukeBox {
       }
       
       return StaticMusicPlayerContainer.instance!
-  }
+    }
   }
 }

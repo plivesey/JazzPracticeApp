@@ -11,8 +11,9 @@ import Foundation
 class CurrentSongDataCenter {
   
   var currentSong: SongData = {
+    // Default
     let sections = MusicGenerator.generateSectionsWithKey(0, numberOfMeasures: 12, numberOfSections: 2)
-    return SongData(sections: sections, form: .AB, repeat: 1)
+    return SongData(sections: sections, form: .ABA, repeat: 1)
   }()
   
   class var sharedInstance:CurrentSongDataCenter {
