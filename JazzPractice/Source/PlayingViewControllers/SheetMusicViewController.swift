@@ -73,11 +73,11 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
     JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, muted: unwrappedMuted, secondsPerBeat: unwrappedTemp)
   }
   
-  func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return chords.count
   }
   
-  func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
+  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ChordCell", forIndexPath: indexPath) as ChordCell
     
     let chordMeasure = chords[indexPath.row]

@@ -15,3 +15,9 @@ struct SongSection {
   var bass:   [ChordNoteMeasure]
   var drums:  [ChordNoteMeasure]
 }
+
+struct SongData {
+  let sections: [SongSection]
+  let form: SongForm
+  let repeat: Int
+}

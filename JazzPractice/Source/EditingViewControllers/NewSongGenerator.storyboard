@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vv9-Od-bWx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vv9-Od-bWx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Song Generator View Controller-->
@@ -27,8 +27,19 @@
                                     <outlet property="delegate" destination="vv9-Od-bWx" id="ypA-wx-oPc"/>
                                 </connections>
                             </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-cJ-yRI">
+                                <rect key="frame" x="16" y="252" width="568" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="P0U-tQ-gF6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="216" id="hXQ-PJ-9kc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="vv9-Od-bWx" id="OCK-5P-zKG"/>
+                                    <outlet property="delegate" destination="vv9-Od-bWx" id="8Ne-uc-7KT"/>
+                                </connections>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-aD-agg">
-                                <rect key="frame" x="25" y="252" width="550" height="40"/>
+                                <rect key="frame" x="25" y="476" width="550" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1BW-Bk-Sn0"/>
                                 </constraints>
@@ -44,15 +55,18 @@
                         <constraints>
                             <constraint firstItem="Jwj-aD-agg" firstAttribute="leading" secondItem="Sis-Pi-ofD" secondAttribute="leadingMargin" constant="9" id="0dp-YD-jsd"/>
                             <constraint firstItem="zah-vD-PKj" firstAttribute="leading" secondItem="Sis-Pi-ofD" secondAttribute="leadingMargin" id="2I7-uu-QZA"/>
-                            <constraint firstItem="Jwj-aD-agg" firstAttribute="top" secondItem="zah-vD-PKj" secondAttribute="bottom" constant="8" id="5Yw-Lu-6Zi"/>
+                            <constraint firstItem="ZbP-cJ-yRI" firstAttribute="top" secondItem="zah-vD-PKj" secondAttribute="bottom" constant="8" id="HT4-EY-Q4Z"/>
                             <constraint firstItem="zah-vD-PKj" firstAttribute="top" secondItem="Dga-Jm-fux" secondAttribute="bottom" constant="8" id="JFl-jD-XUK"/>
-                            <constraint firstItem="Jwj-aD-agg" firstAttribute="top" secondItem="zah-vD-PKj" secondAttribute="bottom" constant="8" id="XBx-OH-4lS"/>
+                            <constraint firstItem="ZbP-cJ-yRI" firstAttribute="leading" secondItem="Sis-Pi-ofD" secondAttribute="leadingMargin" id="XdW-pG-f8s"/>
+                            <constraint firstItem="ZbP-cJ-yRI" firstAttribute="trailing" secondItem="Sis-Pi-ofD" secondAttribute="trailingMargin" id="fOb-v2-j7K"/>
+                            <constraint firstItem="Jwj-aD-agg" firstAttribute="top" secondItem="ZbP-cJ-yRI" secondAttribute="bottom" constant="8" id="ktg-H3-53O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jwj-aD-agg" secondAttribute="trailing" constant="9" id="qbH-kv-Wzz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zah-vD-PKj" secondAttribute="trailing" id="yGo-s0-2vQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pickerView" destination="zah-vD-PKj" id="q8R-DM-9pD"/>
+                        <outlet property="formPickerView" destination="ZbP-cJ-yRI" id="QUS-qE-BGw"/>
+                        <outlet property="keyPickerView" destination="zah-vD-PKj" id="4go-ne-9UA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnt-bc-0h4" userLabel="First Responder" sceneMemberID="firstResponder"/>

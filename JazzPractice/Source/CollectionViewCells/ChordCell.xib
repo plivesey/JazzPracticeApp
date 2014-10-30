@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -26,12 +26,18 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9u-VM-IaB">
+                        <rect key="frame" x="3" y="0.0" width="21" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="IjA-Fe-4sH"/>
+                            <constraint firstAttribute="width" constant="21" id="mDJ-yF-q11"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                <nil key="simulatedStatusBarMetrics"/>
-                <nil key="simulatedTopBarMetrics"/>
-                <nil key="simulatedBottomBarMetrics"/>
-                <nil key="simulatedOrientationMetrics"/>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="D9u-Em-ZuO" secondAttribute="trailing" id="1vT-iL-JFX"/>
@@ -39,15 +45,18 @@
                 <constraint firstAttribute="bottom" secondItem="D9u-Em-ZuO" secondAttribute="bottom" id="Jew-1H-hhA"/>
                 <constraint firstItem="CjH-zr-tgn" firstAttribute="leading" secondItem="fLM-p0-vmq" secondAttribute="leading" constant="10" id="JvK-kQ-RPf"/>
                 <constraint firstAttribute="bottom" secondItem="CjH-zr-tgn" secondAttribute="bottom" constant="10" id="MsU-5m-ygT"/>
+                <constraint firstItem="O9u-VM-IaB" firstAttribute="leading" secondItem="fLM-p0-vmq" secondAttribute="leading" constant="3" id="dun-3F-Gdh"/>
                 <constraint firstItem="D9u-Em-ZuO" firstAttribute="leading" secondItem="CjH-zr-tgn" secondAttribute="trailing" constant="8" id="ict-kk-yT8"/>
+                <constraint firstItem="O9u-VM-IaB" firstAttribute="top" secondItem="fLM-p0-vmq" secondAttribute="top" id="oSQ-mT-fLe"/>
                 <constraint firstItem="D9u-Em-ZuO" firstAttribute="top" secondItem="fLM-p0-vmq" secondAttribute="top" id="pUF-6Q-9d0"/>
                 <constraint firstItem="D9u-Em-ZuO" firstAttribute="leading" secondItem="CjH-zr-tgn" secondAttribute="trailing" constant="8" id="rhJ-mw-HEg"/>
             </constraints>
             <size key="customSize" width="344" height="60"/>
             <connections>
+                <outlet property="sectionLabel" destination="O9u-VM-IaB" id="HJ1-GG-uG8"/>
                 <outlet property="textLabel" destination="CjH-zr-tgn" id="Jjd-TE-UgR"/>
             </connections>
-            <point key="canvasLocation" x="314" y="231"/>
+            <point key="canvasLocation" x="379" y="204"/>
         </collectionViewCell>
     </objects>
 </document>

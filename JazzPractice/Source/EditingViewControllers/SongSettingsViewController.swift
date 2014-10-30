@@ -39,9 +39,6 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
     
     title = "Settings"
     
-    let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancelTapped")
-    navigationItem.rightBarButtonItem = cancelButton
-    
     edgesForExtendedLayout = .None
     
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -49,31 +46,32 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
     pickerView.selectRow(tempo - minTempo, inComponent: 0, animated: false)
   }
   
-  func cancelTapped() {
-    delegate?.songSettingsViewController(self, finishedWithTempo: pickerView.selectedRowInComponent(0) + minTempo, mutedTracks: mutedTracks)
+  override func viewWillDisappear(animated: Bool) {
+    let tempo = pickerView.selectedRowInComponent(0) + minTempo
+    delegate?.songSettingsViewController(self, finishedWithTempo: tempo, mutedTracks: mutedTracks)
   }
   
   // Picker Delegate
   
-  func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
+  func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
     return 1
   }
   
-  func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int {
+  func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     return maxTempo - minTempo + 1
   }
   
-  func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+  func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
     return String(row + minTempo)
   }
   
   // Table view delegate
   
-  func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return mutedTracks.count
   }
   
-  func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
     cell.textLabel.text = mutedTracks[indexPath.row].name
     if mutedTracks[indexPath.row].muted {
@@ -84,16 +82,16 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
     return cell
   }
   
-  func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let row = indexPath.row
     mutedTracks[row] = (mutedTracks[row].name, !mutedTracks[row].muted)
     
     let cell = tableView.cellForRowAtIndexPath(indexPath)
     if mutedTracks[row].muted {
-      cell.accessoryType = .Checkmark
+      cell?.accessoryType = .Checkmark
     } else {
-      cell.accessoryType = .None
+      cell?.accessoryType = .None
     }
   }
 }

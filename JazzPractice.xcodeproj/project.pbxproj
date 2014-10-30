@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		189A5997881C46C0A31EA7CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684E807DFB3424EAB2B204A /* libPods.a */; };
+		36266E881A01BA0400AB66D0 /* SongForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36266E871A01BA0400AB66D0 /* SongForm.swift */; };
 		363B910E1982F46B00E09133 /* SheetMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B910D1982F46B00E09133 /* SheetMusicViewController.swift */; };
 		363B91101982F47600E09133 /* SheetMusicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */; };
 		363B91131982F51100E09133 /* ChordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363B91121982F51100E09133 /* ChordCell.xib */; };
@@ -16,60 +17,64 @@
 		363B911B198314F200E09133 /* SingleChordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B911A198314F200E09133 /* SingleChordViewController.swift */; };
 		363B911D198314FE00E09133 /* ChordsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B911C198314FD00E09133 /* ChordsViewController.storyboard */; };
 		363B911F1983150700E09133 /* SingleChordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B911E1983150700E09133 /* SingleChordViewController.storyboard */; };
+		3698932D19FDA8CF0070ACFA /* drums.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 369892E919FDA8CE0070ACFA /* drums.sf2 */; };
+		3698933019FDA8CF0070ACFA /* jazzBass.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 369892EC19FDA8CF0070ACFA /* jazzBass.sf2 */; };
+		3698933319FDA8CF0070ACFA /* Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 369892EF19FDA8CF0070ACFA /* Piano.sf2 */; };
+		3698933419FDA8CF0070ACFA /* AccurateDispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892F119FDA8CF0070ACFA /* AccurateDispatchTimer.swift */; };
+		3698933519FDA8CF0070ACFA /* BasslineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892F319FDA8CF0070ACFA /* BasslineGenerator.swift */; };
+		3698933619FDA8CF0070ACFA /* DrumGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892F519FDA8CF0070ACFA /* DrumGenerator.swift */; };
+		3698933719FDA8CF0070ACFA /* ChordFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892F719FDA8CF0070ACFA /* ChordFactory.swift */; };
+		3698933819FDA8CF0070ACFA /* ChordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892F919FDA8CF0070ACFA /* ChordData.swift */; };
+		3698933919FDA8CF0070ACFA /* ChordMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892FA19FDA8CF0070ACFA /* ChordMeasure.swift */; };
+		3698933A19FDA8CF0070ACFA /* JazzChordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892FB19FDA8CF0070ACFA /* JazzChordGenerator.swift */; };
+		3698933B19FDA8CF0070ACFA /* AscendingDimChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892FD19FDA8CF0070ACFA /* AscendingDimChordGen.swift */; };
+		3698933C19FDA8CF0070ACFA /* ChordGenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892FE19FDA8CF0070ACFA /* ChordGenProtocol.swift */; };
+		3698933D19FDA8CF0070ACFA /* Circle5ChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369892FF19FDA8CF0070ACFA /* Circle5ChordGen.swift */; };
+		3698933E19FDA8CF0070ACFA /* ClassicalStateMachineChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930019FDA8CF0070ACFA /* ClassicalStateMachineChordGen.swift */; };
+		3698933F19FDA8CF0070ACFA /* FiveOfFiveEndingChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930119FDA8CF0070ACFA /* FiveOfFiveEndingChordGen.swift */; };
+		3698934019FDA8CF0070ACFA /* FiveOverOneEndingChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930219FDA8CF0070ACFA /* FiveOverOneEndingChordGen.swift */; };
+		3698934119FDA8CF0070ACFA /* FiveSusChordEndingGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930319FDA8CF0070ACFA /* FiveSusChordEndingGen.swift */; };
+		3698934219FDA8CF0070ACFA /* FlatSevenDiminishedEndingChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930419FDA8CF0070ACFA /* FlatSevenDiminishedEndingChordGen.swift */; };
+		3698934319FDA8CF0070ACFA /* RhythmChangesOneChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930519FDA8CF0070ACFA /* RhythmChangesOneChordGen.swift */; };
+		3698934419FDA8CF0070ACFA /* RhythmChangesTwoChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930619FDA8CF0070ACFA /* RhythmChangesTwoChordGen.swift */; };
+		3698934519FDA8CF0070ACFA /* SevenDimChordEndingGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930719FDA8CF0070ACFA /* SevenDimChordEndingGen.swift */; };
+		3698934619FDA8CF0070ACFA /* StrayCatStrutChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930819FDA8CF0070ACFA /* StrayCatStrutChordGen.swift */; };
+		3698934719FDA8CF0070ACFA /* SubdominantChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930919FDA8CF0070ACFA /* SubdominantChordGen.swift */; };
+		3698934819FDA8CF0070ACFA /* ToFlatVIIChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930A19FDA8CF0070ACFA /* ToFlatVIIChordGen.swift */; };
+		3698934919FDA8CF0070ACFA /* TwoFiveOneChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930B19FDA8CF0070ACFA /* TwoFiveOneChordGen.swift */; };
+		3698934A19FDA8CF0070ACFA /* TwoFiveTwoFiveEndingChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930C19FDA8CF0070ACFA /* TwoFiveTwoFiveEndingChordGen.swift */; };
+		3698934B19FDA8CF0070ACFA /* TwoSevenTwoFiveOneEndingChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698930D19FDA8CF0070ACFA /* TwoSevenTwoFiveOneEndingChordGen.swift */; };
+		3698934C19FDA8CF0070ACFA /* MelodyMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931019FDA8CF0070ACFA /* MelodyMeasure.swift */; };
+		3698934D19FDA8CF0070ACFA /* JazzMelodyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931119FDA8CF0070ACFA /* JazzMelodyGenerator.swift */; };
+		3698934E19FDA8CF0070ACFA /* JazzMelodyGenerator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931219FDA8CF0070ACFA /* JazzMelodyGenerator2.swift */; };
+		3698934F19FDA8CF0070ACFA /* MelodyRhythmGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931319FDA8CF0070ACFA /* MelodyRhythmGenerator.swift */; };
+		3698935019FDA8CF0070ACFA /* PLMusicPlayerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931619FDA8CF0070ACFA /* PLMusicPlayerNote.swift */; };
+		3698935119FDA8CF0070ACFA /* PLMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931719FDA8CF0070ACFA /* PLMusicPlayer.swift */; };
+		3698935219FDA8CF0070ACFA /* TestMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931819FDA8CF0070ACFA /* TestMusicPlayer.swift */; };
+		3698935319FDA8CF0070ACFA /* MusicUtil+Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931A19FDA8CF0070ACFA /* MusicUtil+Finder.swift */; };
+		3698935419FDA8CF0070ACFA /* MusicUtil+Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931B19FDA8CF0070ACFA /* MusicUtil+Measures.swift */; };
+		3698935519FDA8CF0070ACFA /* MusicUtil+NoteConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931C19FDA8CF0070ACFA /* MusicUtil+NoteConverter.swift */; };
+		3698935619FDA8CF0070ACFA /* MusicUtil+NotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931D19FDA8CF0070ACFA /* MusicUtil+NotePicker.swift */; };
+		3698935719FDA8CF0070ACFA /* MusicUtil+Scales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931E19FDA8CF0070ACFA /* MusicUtil+Scales.swift */; };
+		3698935819FDA8CF0070ACFA /* MusicUtil+Transpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698931F19FDA8CF0070ACFA /* MusicUtil+Transpose.swift */; };
+		3698935919FDA8CF0070ACFA /* MusicUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698932019FDA8CF0070ACFA /* MusicUtil.swift */; };
+		3698935A19FDA8CF0070ACFA /* RandomArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698932219FDA8CF0070ACFA /* RandomArrayExtension.swift */; };
+		3698935B19FDA8CF0070ACFA /* ChordVoicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698932419FDA8CF0070ACFA /* ChordVoicer.swift */; };
+		3698935C19FDA8CF0070ACFA /* RhythmSectionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698932519FDA8CF0070ACFA /* RhythmSectionGenerator.swift */; };
+		3698935D19FDA8CF0070ACFA /* ScoreCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698932719FDA8CF0070ACFA /* ScoreCreator.swift */; };
+		3698935E19FDA8CF0070ACFA /* sax.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3698932819FDA8CF0070ACFA /* sax.sf2 */; };
+		3698935F19FDA8CF0070ACFA /* SongComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698932A19FDA8CF0070ACFA /* SongComposer.swift */; };
+		3698936019FDA8CF0070ACFA /* trumpet.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3698932B19FDA8CF0070ACFA /* trumpet.sf2 */; };
 		36E70C1019A6C6FC00DB306D /* NewSongGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C0F19A6C6FC00DB306D /* NewSongGeneratorViewController.swift */; };
 		36E70C1219A6C70C00DB306D /* NewSongGenerator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E70C1119A6C70C00DB306D /* NewSongGenerator.storyboard */; };
 		36E70C1419A907A300DB306D /* SongSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C1319A907A300DB306D /* SongSettingsViewController.swift */; };
 		36E70C1619A907AE00DB306D /* SongSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E70C1519A907AE00DB306D /* SongSettings.storyboard */; };
 		36E70C1919A907E400DB306D /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C1819A907E400DB306D /* UIUtils.swift */; };
-		36E70C1D19A937A600DB306D /* MusicUtil+Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C1C19A937A600DB306D /* MusicUtil+Measures.swift */; };
 		36ED668E1982D535001D5C10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ED668D1982D535001D5C10 /* Images.xcassets */; };
 		36ED669A1982D535001D5C10 /* JazzPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66991982D535001D5C10 /* JazzPracticeTests.swift */; };
 		36ED66AB1982D6FD001D5C10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66A91982D6FD001D5C10 /* AppDelegate.swift */; };
 		36ED66AE1982D9D3001D5C10 /* SectionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66AD1982D9D3001D5C10 /* SectionsCollectionViewController.swift */; };
 		36ED66B01982DA26001D5C10 /* SectionsCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66AF1982DA26001D5C10 /* SectionsCollectionViewController.storyboard */; };
-		36ED66F01982DB27001D5C10 /* drums.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66B41982DB27001D5C10 /* drums.sf2 */; };
-		36ED66F21982DB27001D5C10 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66B61982DB27001D5C10 /* Info.plist */; };
-		36ED66F31982DB27001D5C10 /* jazzBass.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66B71982DB27001D5C10 /* jazzBass.sf2 */; };
-		36ED66F41982DB27001D5C10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66B81982DB27001D5C10 /* MainViewController.swift */; };
-		36ED66F51982DB27001D5C10 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66B91982DB27001D5C10 /* MainViewController.xib */; };
-		36ED66F61982DB27001D5C10 /* Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66BA1982DB27001D5C10 /* Piano.sf2 */; };
-		36ED66F71982DB27001D5C10 /* AccurateDispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66BC1982DB27001D5C10 /* AccurateDispatchTimer.swift */; };
-		36ED66F81982DB27001D5C10 /* BasslineGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66BE1982DB27001D5C10 /* BasslineGenerator.swift */; };
-		36ED66F91982DB27001D5C10 /* DrumGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66C01982DB27001D5C10 /* DrumGenerator.swift */; };
-		36ED66FA1982DB27001D5C10 /* ChordFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66C21982DB27001D5C10 /* ChordFactory.swift */; };
-		36ED66FB1982DB27001D5C10 /* ChordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66C41982DB27001D5C10 /* ChordData.swift */; };
-		36ED66FC1982DB27001D5C10 /* ChordMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66C51982DB27001D5C10 /* ChordMeasure.swift */; };
-		36ED66FD1982DB27001D5C10 /* JazzChordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66C61982DB27001D5C10 /* JazzChordGenerator.swift */; };
-		36ED66FE1982DB27001D5C10 /* AscendingDimChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66C81982DB27001D5C10 /* AscendingDimChordGen.swift */; };
-		36ED66FF1982DB27001D5C10 /* ChordGenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66C91982DB27001D5C10 /* ChordGenProtocol.swift */; };
-		36ED67001982DB27001D5C10 /* Circle5ChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66CA1982DB27001D5C10 /* Circle5ChordGen.swift */; };
-		36ED67011982DB27001D5C10 /* ClassicalStateMachineChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66CB1982DB27001D5C10 /* ClassicalStateMachineChordGen.swift */; };
-		36ED67021982DB27001D5C10 /* RhythmChangesOneChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66CC1982DB27001D5C10 /* RhythmChangesOneChordGen.swift */; };
-		36ED67031982DB27001D5C10 /* RhythmChangesTwoChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66CD1982DB27001D5C10 /* RhythmChangesTwoChordGen.swift */; };
-		36ED67041982DB27001D5C10 /* StrayCatStrutChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66CE1982DB27001D5C10 /* StrayCatStrutChordGen.swift */; };
-		36ED67051982DB27001D5C10 /* SubdominantChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66CF1982DB27001D5C10 /* SubdominantChordGen.swift */; };
-		36ED67061982DB27001D5C10 /* ToFlatVIIChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66D01982DB27001D5C10 /* ToFlatVIIChordGen.swift */; };
-		36ED67071982DB27001D5C10 /* TwoFiveOneChordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66D11982DB27001D5C10 /* TwoFiveOneChordGen.swift */; };
-		36ED67081982DB27001D5C10 /* MelodyMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66D41982DB27001D5C10 /* MelodyMeasure.swift */; };
-		36ED67091982DB27001D5C10 /* JazzMelodyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66D51982DB27001D5C10 /* JazzMelodyGenerator.swift */; };
-		36ED670A1982DB27001D5C10 /* JazzMelodyGenerator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66D61982DB27001D5C10 /* JazzMelodyGenerator2.swift */; };
-		36ED670B1982DB27001D5C10 /* MelodyRhythmGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66D71982DB27001D5C10 /* MelodyRhythmGenerator.swift */; };
-		36ED670C1982DB27001D5C10 /* PLMusicPlayerNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66DA1982DB27001D5C10 /* PLMusicPlayerNote.swift */; };
-		36ED670D1982DB27001D5C10 /* PLMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66DB1982DB27001D5C10 /* PLMusicPlayer.swift */; };
-		36ED670E1982DB27001D5C10 /* TestMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66DC1982DB27001D5C10 /* TestMusicPlayer.swift */; };
-		36ED670F1982DB27001D5C10 /* MusicUtil+Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66DE1982DB27001D5C10 /* MusicUtil+Finder.swift */; };
-		36ED67101982DB27001D5C10 /* MusicUtil+NoteConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66DF1982DB27001D5C10 /* MusicUtil+NoteConverter.swift */; };
-		36ED67111982DB27001D5C10 /* MusicUtil+NotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66E01982DB27001D5C10 /* MusicUtil+NotePicker.swift */; };
-		36ED67121982DB27001D5C10 /* MusicUtil+Scales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66E11982DB27001D5C10 /* MusicUtil+Scales.swift */; };
-		36ED67131982DB27001D5C10 /* MusicUtil+Transpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66E21982DB27001D5C10 /* MusicUtil+Transpose.swift */; };
-		36ED67141982DB27001D5C10 /* MusicUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66E31982DB27001D5C10 /* MusicUtil.swift */; };
-		36ED67151982DB27001D5C10 /* RandomArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66E51982DB27001D5C10 /* RandomArrayExtension.swift */; };
-		36ED67161982DB27001D5C10 /* ChordVoicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66E71982DB27001D5C10 /* ChordVoicer.swift */; };
-		36ED67171982DB27001D5C10 /* RhythmSectionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66E81982DB27001D5C10 /* RhythmSectionGenerator.swift */; };
-		36ED67181982DB27001D5C10 /* ScoreCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66EA1982DB27001D5C10 /* ScoreCreator.swift */; };
-		36ED67191982DB27001D5C10 /* sax.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66EB1982DB27001D5C10 /* sax.sf2 */; };
-		36ED671A1982DB27001D5C10 /* SongComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED66ED1982DB27001D5C10 /* SongComposer.swift */; };
-		36ED671B1982DB27001D5C10 /* trumpet.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 36ED66EE1982DB27001D5C10 /* trumpet.sf2 */; };
 		36ED671E1982DBF7001D5C10 /* MusicGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED671D1982DBF7001D5C10 /* MusicGenerator.swift */; };
 		36ED67201982DD07001D5C10 /* SongSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED671F1982DD07001D5C10 /* SongSection.swift */; };
 		36ED67241982DE99001D5C10 /* CurrentSongDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ED67231982DE99001D5C10 /* CurrentSongDataCenter.swift */; };
@@ -87,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36266E871A01BA0400AB66D0 /* SongForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongForm.swift; sourceTree = "<group>"; };
 		363B910D1982F46B00E09133 /* SheetMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetMusicViewController.swift; sourceTree = "<group>"; };
 		363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetMusicViewController.storyboard; sourceTree = "<group>"; };
 		363B91121982F51100E09133 /* ChordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordCell.xib; sourceTree = "<group>"; };
@@ -95,12 +101,59 @@
 		363B911A198314F200E09133 /* SingleChordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleChordViewController.swift; sourceTree = "<group>"; };
 		363B911C198314FD00E09133 /* ChordsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChordsViewController.storyboard; sourceTree = "<group>"; };
 		363B911E1983150700E09133 /* SingleChordViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingleChordViewController.storyboard; sourceTree = "<group>"; };
+		369892E919FDA8CE0070ACFA /* drums.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.sf2; sourceTree = "<group>"; };
+		369892EC19FDA8CF0070ACFA /* jazzBass.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = jazzBass.sf2; sourceTree = "<group>"; };
+		369892EF19FDA8CF0070ACFA /* Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.sf2; sourceTree = "<group>"; };
+		369892F119FDA8CF0070ACFA /* AccurateDispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccurateDispatchTimer.swift; sourceTree = "<group>"; };
+		369892F319FDA8CF0070ACFA /* BasslineGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasslineGenerator.swift; sourceTree = "<group>"; };
+		369892F519FDA8CF0070ACFA /* DrumGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumGenerator.swift; sourceTree = "<group>"; };
+		369892F719FDA8CF0070ACFA /* ChordFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordFactory.swift; sourceTree = "<group>"; };
+		369892F919FDA8CF0070ACFA /* ChordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordData.swift; sourceTree = "<group>"; };
+		369892FA19FDA8CF0070ACFA /* ChordMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordMeasure.swift; sourceTree = "<group>"; };
+		369892FB19FDA8CF0070ACFA /* JazzChordGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzChordGenerator.swift; sourceTree = "<group>"; };
+		369892FD19FDA8CF0070ACFA /* AscendingDimChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AscendingDimChordGen.swift; sourceTree = "<group>"; };
+		369892FE19FDA8CF0070ACFA /* ChordGenProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordGenProtocol.swift; sourceTree = "<group>"; };
+		369892FF19FDA8CF0070ACFA /* Circle5ChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle5ChordGen.swift; sourceTree = "<group>"; };
+		3698930019FDA8CF0070ACFA /* ClassicalStateMachineChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassicalStateMachineChordGen.swift; sourceTree = "<group>"; };
+		3698930119FDA8CF0070ACFA /* FiveOfFiveEndingChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveOfFiveEndingChordGen.swift; sourceTree = "<group>"; };
+		3698930219FDA8CF0070ACFA /* FiveOverOneEndingChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveOverOneEndingChordGen.swift; sourceTree = "<group>"; };
+		3698930319FDA8CF0070ACFA /* FiveSusChordEndingGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiveSusChordEndingGen.swift; sourceTree = "<group>"; };
+		3698930419FDA8CF0070ACFA /* FlatSevenDiminishedEndingChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatSevenDiminishedEndingChordGen.swift; sourceTree = "<group>"; };
+		3698930519FDA8CF0070ACFA /* RhythmChangesOneChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmChangesOneChordGen.swift; sourceTree = "<group>"; };
+		3698930619FDA8CF0070ACFA /* RhythmChangesTwoChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmChangesTwoChordGen.swift; sourceTree = "<group>"; };
+		3698930719FDA8CF0070ACFA /* SevenDimChordEndingGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenDimChordEndingGen.swift; sourceTree = "<group>"; };
+		3698930819FDA8CF0070ACFA /* StrayCatStrutChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrayCatStrutChordGen.swift; sourceTree = "<group>"; };
+		3698930919FDA8CF0070ACFA /* SubdominantChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubdominantChordGen.swift; sourceTree = "<group>"; };
+		3698930A19FDA8CF0070ACFA /* ToFlatVIIChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToFlatVIIChordGen.swift; sourceTree = "<group>"; };
+		3698930B19FDA8CF0070ACFA /* TwoFiveOneChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoFiveOneChordGen.swift; sourceTree = "<group>"; };
+		3698930C19FDA8CF0070ACFA /* TwoFiveTwoFiveEndingChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoFiveTwoFiveEndingChordGen.swift; sourceTree = "<group>"; };
+		3698930D19FDA8CF0070ACFA /* TwoSevenTwoFiveOneEndingChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSevenTwoFiveOneEndingChordGen.swift; sourceTree = "<group>"; };
+		3698931019FDA8CF0070ACFA /* MelodyMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodyMeasure.swift; sourceTree = "<group>"; };
+		3698931119FDA8CF0070ACFA /* JazzMelodyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzMelodyGenerator.swift; sourceTree = "<group>"; };
+		3698931219FDA8CF0070ACFA /* JazzMelodyGenerator2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzMelodyGenerator2.swift; sourceTree = "<group>"; };
+		3698931319FDA8CF0070ACFA /* MelodyRhythmGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodyRhythmGenerator.swift; sourceTree = "<group>"; };
+		3698931619FDA8CF0070ACFA /* PLMusicPlayerNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLMusicPlayerNote.swift; sourceTree = "<group>"; };
+		3698931719FDA8CF0070ACFA /* PLMusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLMusicPlayer.swift; sourceTree = "<group>"; };
+		3698931819FDA8CF0070ACFA /* TestMusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMusicPlayer.swift; sourceTree = "<group>"; };
+		3698931A19FDA8CF0070ACFA /* MusicUtil+Finder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Finder.swift"; sourceTree = "<group>"; };
+		3698931B19FDA8CF0070ACFA /* MusicUtil+Measures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Measures.swift"; sourceTree = "<group>"; };
+		3698931C19FDA8CF0070ACFA /* MusicUtil+NoteConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+NoteConverter.swift"; sourceTree = "<group>"; };
+		3698931D19FDA8CF0070ACFA /* MusicUtil+NotePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+NotePicker.swift"; sourceTree = "<group>"; };
+		3698931E19FDA8CF0070ACFA /* MusicUtil+Scales.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Scales.swift"; sourceTree = "<group>"; };
+		3698931F19FDA8CF0070ACFA /* MusicUtil+Transpose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Transpose.swift"; sourceTree = "<group>"; };
+		3698932019FDA8CF0070ACFA /* MusicUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicUtil.swift; sourceTree = "<group>"; };
+		3698932219FDA8CF0070ACFA /* RandomArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomArrayExtension.swift; sourceTree = "<group>"; };
+		3698932419FDA8CF0070ACFA /* ChordVoicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordVoicer.swift; sourceTree = "<group>"; };
+		3698932519FDA8CF0070ACFA /* RhythmSectionGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmSectionGenerator.swift; sourceTree = "<group>"; };
+		3698932719FDA8CF0070ACFA /* ScoreCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCreator.swift; sourceTree = "<group>"; };
+		3698932819FDA8CF0070ACFA /* sax.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sax.sf2; sourceTree = "<group>"; };
+		3698932A19FDA8CF0070ACFA /* SongComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongComposer.swift; sourceTree = "<group>"; };
+		3698932B19FDA8CF0070ACFA /* trumpet.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpet.sf2; sourceTree = "<group>"; };
 		36E70C0F19A6C6FC00DB306D /* NewSongGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSongGeneratorViewController.swift; sourceTree = "<group>"; };
 		36E70C1119A6C70C00DB306D /* NewSongGenerator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSongGenerator.storyboard; sourceTree = "<group>"; };
 		36E70C1319A907A300DB306D /* SongSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSettingsViewController.swift; sourceTree = "<group>"; };
 		36E70C1519A907AE00DB306D /* SongSettings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SongSettings.storyboard; sourceTree = "<group>"; };
 		36E70C1819A907E400DB306D /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
-		36E70C1C19A937A600DB306D /* MusicUtil+Measures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Measures.swift"; sourceTree = "<group>"; };
 		36ED66811982D535001D5C10 /* JazzPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ED66851982D535001D5C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36ED668D1982D535001D5C10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -110,49 +163,6 @@
 		36ED66A91982D6FD001D5C10 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36ED66AD1982D9D3001D5C10 /* SectionsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsCollectionViewController.swift; sourceTree = "<group>"; };
 		36ED66AF1982DA26001D5C10 /* SectionsCollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SectionsCollectionViewController.storyboard; sourceTree = "<group>"; };
-		36ED66B41982DB27001D5C10 /* drums.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.sf2; sourceTree = "<group>"; };
-		36ED66B61982DB27001D5C10 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36ED66B71982DB27001D5C10 /* jazzBass.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = jazzBass.sf2; sourceTree = "<group>"; };
-		36ED66B81982DB27001D5C10 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		36ED66B91982DB27001D5C10 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		36ED66BA1982DB27001D5C10 /* Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.sf2; sourceTree = "<group>"; };
-		36ED66BC1982DB27001D5C10 /* AccurateDispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccurateDispatchTimer.swift; sourceTree = "<group>"; };
-		36ED66BE1982DB27001D5C10 /* BasslineGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasslineGenerator.swift; sourceTree = "<group>"; };
-		36ED66C01982DB27001D5C10 /* DrumGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumGenerator.swift; sourceTree = "<group>"; };
-		36ED66C21982DB27001D5C10 /* ChordFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordFactory.swift; sourceTree = "<group>"; };
-		36ED66C41982DB27001D5C10 /* ChordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordData.swift; sourceTree = "<group>"; };
-		36ED66C51982DB27001D5C10 /* ChordMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordMeasure.swift; sourceTree = "<group>"; };
-		36ED66C61982DB27001D5C10 /* JazzChordGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzChordGenerator.swift; sourceTree = "<group>"; };
-		36ED66C81982DB27001D5C10 /* AscendingDimChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AscendingDimChordGen.swift; sourceTree = "<group>"; };
-		36ED66C91982DB27001D5C10 /* ChordGenProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordGenProtocol.swift; sourceTree = "<group>"; };
-		36ED66CA1982DB27001D5C10 /* Circle5ChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle5ChordGen.swift; sourceTree = "<group>"; };
-		36ED66CB1982DB27001D5C10 /* ClassicalStateMachineChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassicalStateMachineChordGen.swift; sourceTree = "<group>"; };
-		36ED66CC1982DB27001D5C10 /* RhythmChangesOneChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmChangesOneChordGen.swift; sourceTree = "<group>"; };
-		36ED66CD1982DB27001D5C10 /* RhythmChangesTwoChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmChangesTwoChordGen.swift; sourceTree = "<group>"; };
-		36ED66CE1982DB27001D5C10 /* StrayCatStrutChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrayCatStrutChordGen.swift; sourceTree = "<group>"; };
-		36ED66CF1982DB27001D5C10 /* SubdominantChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubdominantChordGen.swift; sourceTree = "<group>"; };
-		36ED66D01982DB27001D5C10 /* ToFlatVIIChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToFlatVIIChordGen.swift; sourceTree = "<group>"; };
-		36ED66D11982DB27001D5C10 /* TwoFiveOneChordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoFiveOneChordGen.swift; sourceTree = "<group>"; };
-		36ED66D41982DB27001D5C10 /* MelodyMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodyMeasure.swift; sourceTree = "<group>"; };
-		36ED66D51982DB27001D5C10 /* JazzMelodyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzMelodyGenerator.swift; sourceTree = "<group>"; };
-		36ED66D61982DB27001D5C10 /* JazzMelodyGenerator2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzMelodyGenerator2.swift; sourceTree = "<group>"; };
-		36ED66D71982DB27001D5C10 /* MelodyRhythmGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodyRhythmGenerator.swift; sourceTree = "<group>"; };
-		36ED66DA1982DB27001D5C10 /* PLMusicPlayerNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLMusicPlayerNote.swift; sourceTree = "<group>"; };
-		36ED66DB1982DB27001D5C10 /* PLMusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLMusicPlayer.swift; sourceTree = "<group>"; };
-		36ED66DC1982DB27001D5C10 /* TestMusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMusicPlayer.swift; sourceTree = "<group>"; };
-		36ED66DE1982DB27001D5C10 /* MusicUtil+Finder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Finder.swift"; sourceTree = "<group>"; };
-		36ED66DF1982DB27001D5C10 /* MusicUtil+NoteConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+NoteConverter.swift"; sourceTree = "<group>"; };
-		36ED66E01982DB27001D5C10 /* MusicUtil+NotePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+NotePicker.swift"; sourceTree = "<group>"; };
-		36ED66E11982DB27001D5C10 /* MusicUtil+Scales.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Scales.swift"; sourceTree = "<group>"; };
-		36ED66E21982DB27001D5C10 /* MusicUtil+Transpose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicUtil+Transpose.swift"; sourceTree = "<group>"; };
-		36ED66E31982DB27001D5C10 /* MusicUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicUtil.swift; sourceTree = "<group>"; };
-		36ED66E51982DB27001D5C10 /* RandomArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomArrayExtension.swift; sourceTree = "<group>"; };
-		36ED66E71982DB27001D5C10 /* ChordVoicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordVoicer.swift; sourceTree = "<group>"; };
-		36ED66E81982DB27001D5C10 /* RhythmSectionGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhythmSectionGenerator.swift; sourceTree = "<group>"; };
-		36ED66EA1982DB27001D5C10 /* ScoreCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCreator.swift; sourceTree = "<group>"; };
-		36ED66EB1982DB27001D5C10 /* sax.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sax.sf2; sourceTree = "<group>"; };
-		36ED66ED1982DB27001D5C10 /* SongComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongComposer.swift; sourceTree = "<group>"; };
-		36ED66EE1982DB27001D5C10 /* trumpet.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpet.sf2; sourceTree = "<group>"; };
 		36ED671D1982DBF7001D5C10 /* MusicGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicGenerator.swift; sourceTree = "<group>"; };
 		36ED671F1982DD07001D5C10 /* SongSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSection.swift; sourceTree = "<group>"; };
 		36ED67231982DE99001D5C10 /* CurrentSongDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentSongDataCenter.swift; sourceTree = "<group>"; };
@@ -196,6 +206,182 @@
 				363B91121982F51100E09133 /* ChordCell.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		369892E719FDA8CE0070ACFA /* TestAudio */ = {
+			isa = PBXGroup;
+			children = (
+				369892E919FDA8CE0070ACFA /* drums.sf2 */,
+				369892EC19FDA8CF0070ACFA /* jazzBass.sf2 */,
+				369892EF19FDA8CF0070ACFA /* Piano.sf2 */,
+				369892F019FDA8CF0070ACFA /* PLAccurateTimer */,
+				369892F219FDA8CF0070ACFA /* PLBasslineGenerator */,
+				369892F419FDA8CF0070ACFA /* PLDrumGenerator */,
+				369892F619FDA8CF0070ACFA /* PLJazzChordGenerator */,
+				3698930E19FDA8CF0070ACFA /* PLJazzMelodyGenerator */,
+				3698931419FDA8CF0070ACFA /* PLMusicPlayer */,
+				3698931919FDA8CF0070ACFA /* PLMusicRepresentationHelpers */,
+				3698932119FDA8CF0070ACFA /* PLRandomHelpers */,
+				3698932319FDA8CF0070ACFA /* PLRhythmSectionGenerator */,
+				3698932619FDA8CF0070ACFA /* PLScoreCreator */,
+				3698932819FDA8CF0070ACFA /* sax.sf2 */,
+				3698932919FDA8CF0070ACFA /* SongStructureGenerator */,
+				3698932B19FDA8CF0070ACFA /* trumpet.sf2 */,
+			);
+			name = TestAudio;
+			path = ../../TestAudio/TestAudio;
+			sourceTree = "<group>";
+		};
+		369892F019FDA8CF0070ACFA /* PLAccurateTimer */ = {
+			isa = PBXGroup;
+			children = (
+				369892F119FDA8CF0070ACFA /* AccurateDispatchTimer.swift */,
+			);
+			path = PLAccurateTimer;
+			sourceTree = "<group>";
+		};
+		369892F219FDA8CF0070ACFA /* PLBasslineGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				369892F319FDA8CF0070ACFA /* BasslineGenerator.swift */,
+			);
+			path = PLBasslineGenerator;
+			sourceTree = "<group>";
+		};
+		369892F419FDA8CF0070ACFA /* PLDrumGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				369892F519FDA8CF0070ACFA /* DrumGenerator.swift */,
+			);
+			path = PLDrumGenerator;
+			sourceTree = "<group>";
+		};
+		369892F619FDA8CF0070ACFA /* PLJazzChordGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				369892F719FDA8CF0070ACFA /* ChordFactory.swift */,
+				369892F819FDA8CF0070ACFA /* DataStructures */,
+				369892FB19FDA8CF0070ACFA /* JazzChordGenerator.swift */,
+				369892FC19FDA8CF0070ACFA /* JazzChordGenerators */,
+			);
+			path = PLJazzChordGenerator;
+			sourceTree = "<group>";
+		};
+		369892F819FDA8CF0070ACFA /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				369892F919FDA8CF0070ACFA /* ChordData.swift */,
+				369892FA19FDA8CF0070ACFA /* ChordMeasure.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		369892FC19FDA8CF0070ACFA /* JazzChordGenerators */ = {
+			isa = PBXGroup;
+			children = (
+				369892FD19FDA8CF0070ACFA /* AscendingDimChordGen.swift */,
+				369892FE19FDA8CF0070ACFA /* ChordGenProtocol.swift */,
+				369892FF19FDA8CF0070ACFA /* Circle5ChordGen.swift */,
+				3698930019FDA8CF0070ACFA /* ClassicalStateMachineChordGen.swift */,
+				3698930119FDA8CF0070ACFA /* FiveOfFiveEndingChordGen.swift */,
+				3698930219FDA8CF0070ACFA /* FiveOverOneEndingChordGen.swift */,
+				3698930319FDA8CF0070ACFA /* FiveSusChordEndingGen.swift */,
+				3698930419FDA8CF0070ACFA /* FlatSevenDiminishedEndingChordGen.swift */,
+				3698930519FDA8CF0070ACFA /* RhythmChangesOneChordGen.swift */,
+				3698930619FDA8CF0070ACFA /* RhythmChangesTwoChordGen.swift */,
+				3698930719FDA8CF0070ACFA /* SevenDimChordEndingGen.swift */,
+				3698930819FDA8CF0070ACFA /* StrayCatStrutChordGen.swift */,
+				3698930919FDA8CF0070ACFA /* SubdominantChordGen.swift */,
+				3698930A19FDA8CF0070ACFA /* ToFlatVIIChordGen.swift */,
+				3698930B19FDA8CF0070ACFA /* TwoFiveOneChordGen.swift */,
+				3698930C19FDA8CF0070ACFA /* TwoFiveTwoFiveEndingChordGen.swift */,
+				3698930D19FDA8CF0070ACFA /* TwoSevenTwoFiveOneEndingChordGen.swift */,
+			);
+			path = JazzChordGenerators;
+			sourceTree = "<group>";
+		};
+		3698930E19FDA8CF0070ACFA /* PLJazzMelodyGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				3698930F19FDA8CF0070ACFA /* DataStructures */,
+				3698931119FDA8CF0070ACFA /* JazzMelodyGenerator.swift */,
+				3698931219FDA8CF0070ACFA /* JazzMelodyGenerator2.swift */,
+				3698931319FDA8CF0070ACFA /* MelodyRhythmGenerator.swift */,
+			);
+			path = PLJazzMelodyGenerator;
+			sourceTree = "<group>";
+		};
+		3698930F19FDA8CF0070ACFA /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				3698931019FDA8CF0070ACFA /* MelodyMeasure.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		3698931419FDA8CF0070ACFA /* PLMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3698931519FDA8CF0070ACFA /* DataStructures */,
+				3698931719FDA8CF0070ACFA /* PLMusicPlayer.swift */,
+				3698931819FDA8CF0070ACFA /* TestMusicPlayer.swift */,
+			);
+			path = PLMusicPlayer;
+			sourceTree = "<group>";
+		};
+		3698931519FDA8CF0070ACFA /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				3698931619FDA8CF0070ACFA /* PLMusicPlayerNote.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		3698931919FDA8CF0070ACFA /* PLMusicRepresentationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				3698931A19FDA8CF0070ACFA /* MusicUtil+Finder.swift */,
+				3698931B19FDA8CF0070ACFA /* MusicUtil+Measures.swift */,
+				3698931C19FDA8CF0070ACFA /* MusicUtil+NoteConverter.swift */,
+				3698931D19FDA8CF0070ACFA /* MusicUtil+NotePicker.swift */,
+				3698931E19FDA8CF0070ACFA /* MusicUtil+Scales.swift */,
+				3698931F19FDA8CF0070ACFA /* MusicUtil+Transpose.swift */,
+				3698932019FDA8CF0070ACFA /* MusicUtil.swift */,
+			);
+			path = PLMusicRepresentationHelpers;
+			sourceTree = "<group>";
+		};
+		3698932119FDA8CF0070ACFA /* PLRandomHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				3698932219FDA8CF0070ACFA /* RandomArrayExtension.swift */,
+			);
+			path = PLRandomHelpers;
+			sourceTree = "<group>";
+		};
+		3698932319FDA8CF0070ACFA /* PLRhythmSectionGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				3698932419FDA8CF0070ACFA /* ChordVoicer.swift */,
+				3698932519FDA8CF0070ACFA /* RhythmSectionGenerator.swift */,
+			);
+			path = PLRhythmSectionGenerator;
+			sourceTree = "<group>";
+		};
+		3698932619FDA8CF0070ACFA /* PLScoreCreator */ = {
+			isa = PBXGroup;
+			children = (
+				3698932719FDA8CF0070ACFA /* ScoreCreator.swift */,
+			);
+			path = PLScoreCreator;
+			sourceTree = "<group>";
+		};
+		3698932919FDA8CF0070ACFA /* SongStructureGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				3698932A19FDA8CF0070ACFA /* SongComposer.swift */,
+			);
+			path = SongStructureGenerator;
 			sourceTree = "<group>";
 		};
 		36E70C1719A907C400DB306D /* Utils */ = {
@@ -290,14 +476,14 @@
 			children = (
 				36ED66AD1982D9D3001D5C10 /* SectionsCollectionViewController.swift */,
 				36ED66AF1982DA26001D5C10 /* SectionsCollectionViewController.storyboard */,
-				363B9118198314DB00E09133 /* ChordsViewController.swift */,
-				363B911C198314FD00E09133 /* ChordsViewController.storyboard */,
-				363B911A198314F200E09133 /* SingleChordViewController.swift */,
-				363B911E1983150700E09133 /* SingleChordViewController.storyboard */,
 				36E70C0F19A6C6FC00DB306D /* NewSongGeneratorViewController.swift */,
 				36E70C1119A6C70C00DB306D /* NewSongGenerator.storyboard */,
 				36E70C1319A907A300DB306D /* SongSettingsViewController.swift */,
 				36E70C1519A907AE00DB306D /* SongSettings.storyboard */,
+				363B9118198314DB00E09133 /* ChordsViewController.swift */,
+				363B911C198314FD00E09133 /* ChordsViewController.storyboard */,
+				363B911A198314F200E09133 /* SingleChordViewController.swift */,
+				363B911E1983150700E09133 /* SingleChordViewController.storyboard */,
 			);
 			path = EditingViewControllers;
 			sourceTree = "<group>";
@@ -312,181 +498,9 @@
 		36ED66B11982DAE1001D5C10 /* TempGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				36ED66B21982DB27001D5C10 /* TestAudio */,
+				369892E719FDA8CE0070ACFA /* TestAudio */,
 			);
 			name = TempGenerator;
-			sourceTree = "<group>";
-		};
-		36ED66B21982DB27001D5C10 /* TestAudio */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66B41982DB27001D5C10 /* drums.sf2 */,
-				36ED66B61982DB27001D5C10 /* Info.plist */,
-				36ED66B71982DB27001D5C10 /* jazzBass.sf2 */,
-				36ED66B81982DB27001D5C10 /* MainViewController.swift */,
-				36ED66B91982DB27001D5C10 /* MainViewController.xib */,
-				36ED66BA1982DB27001D5C10 /* Piano.sf2 */,
-				36ED66BB1982DB27001D5C10 /* PLAccurateTimer */,
-				36ED66BD1982DB27001D5C10 /* PLBasslineGenerator */,
-				36ED66BF1982DB27001D5C10 /* PLDrumGenerator */,
-				36ED66C11982DB27001D5C10 /* PLJazzChordGenerator */,
-				36ED66D21982DB27001D5C10 /* PLJazzMelodyGenerator */,
-				36ED66D81982DB27001D5C10 /* PLMusicPlayer */,
-				36ED66DD1982DB27001D5C10 /* PLMusicRepresentationHelpers */,
-				36ED66E41982DB27001D5C10 /* PLRandomHelpers */,
-				36ED66E61982DB27001D5C10 /* PLRhythmSectionGenerator */,
-				36ED66E91982DB27001D5C10 /* PLScoreCreator */,
-				36ED66EB1982DB27001D5C10 /* sax.sf2 */,
-				36ED66EC1982DB27001D5C10 /* SongStructureGenerator */,
-				36ED66EE1982DB27001D5C10 /* trumpet.sf2 */,
-			);
-			name = TestAudio;
-			path = ../../../Desktop/TestAudio/TestAudio;
-			sourceTree = "<group>";
-		};
-		36ED66BB1982DB27001D5C10 /* PLAccurateTimer */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66BC1982DB27001D5C10 /* AccurateDispatchTimer.swift */,
-			);
-			path = PLAccurateTimer;
-			sourceTree = "<group>";
-		};
-		36ED66BD1982DB27001D5C10 /* PLBasslineGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66BE1982DB27001D5C10 /* BasslineGenerator.swift */,
-			);
-			path = PLBasslineGenerator;
-			sourceTree = "<group>";
-		};
-		36ED66BF1982DB27001D5C10 /* PLDrumGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66C01982DB27001D5C10 /* DrumGenerator.swift */,
-			);
-			path = PLDrumGenerator;
-			sourceTree = "<group>";
-		};
-		36ED66C11982DB27001D5C10 /* PLJazzChordGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66C21982DB27001D5C10 /* ChordFactory.swift */,
-				36ED66C31982DB27001D5C10 /* DataStructures */,
-				36ED66C61982DB27001D5C10 /* JazzChordGenerator.swift */,
-				36ED66C71982DB27001D5C10 /* JazzChordGenerators */,
-			);
-			path = PLJazzChordGenerator;
-			sourceTree = "<group>";
-		};
-		36ED66C31982DB27001D5C10 /* DataStructures */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66C41982DB27001D5C10 /* ChordData.swift */,
-				36ED66C51982DB27001D5C10 /* ChordMeasure.swift */,
-			);
-			path = DataStructures;
-			sourceTree = "<group>";
-		};
-		36ED66C71982DB27001D5C10 /* JazzChordGenerators */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66C81982DB27001D5C10 /* AscendingDimChordGen.swift */,
-				36ED66C91982DB27001D5C10 /* ChordGenProtocol.swift */,
-				36ED66CA1982DB27001D5C10 /* Circle5ChordGen.swift */,
-				36ED66CB1982DB27001D5C10 /* ClassicalStateMachineChordGen.swift */,
-				36ED66CC1982DB27001D5C10 /* RhythmChangesOneChordGen.swift */,
-				36ED66CD1982DB27001D5C10 /* RhythmChangesTwoChordGen.swift */,
-				36ED66CE1982DB27001D5C10 /* StrayCatStrutChordGen.swift */,
-				36ED66CF1982DB27001D5C10 /* SubdominantChordGen.swift */,
-				36ED66D01982DB27001D5C10 /* ToFlatVIIChordGen.swift */,
-				36ED66D11982DB27001D5C10 /* TwoFiveOneChordGen.swift */,
-			);
-			path = JazzChordGenerators;
-			sourceTree = "<group>";
-		};
-		36ED66D21982DB27001D5C10 /* PLJazzMelodyGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66D31982DB27001D5C10 /* DataStructures */,
-				36ED66D51982DB27001D5C10 /* JazzMelodyGenerator.swift */,
-				36ED66D61982DB27001D5C10 /* JazzMelodyGenerator2.swift */,
-				36ED66D71982DB27001D5C10 /* MelodyRhythmGenerator.swift */,
-			);
-			path = PLJazzMelodyGenerator;
-			sourceTree = "<group>";
-		};
-		36ED66D31982DB27001D5C10 /* DataStructures */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66D41982DB27001D5C10 /* MelodyMeasure.swift */,
-			);
-			path = DataStructures;
-			sourceTree = "<group>";
-		};
-		36ED66D81982DB27001D5C10 /* PLMusicPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66D91982DB27001D5C10 /* DataStructures */,
-				36ED66DB1982DB27001D5C10 /* PLMusicPlayer.swift */,
-				36ED66DC1982DB27001D5C10 /* TestMusicPlayer.swift */,
-			);
-			path = PLMusicPlayer;
-			sourceTree = "<group>";
-		};
-		36ED66D91982DB27001D5C10 /* DataStructures */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66DA1982DB27001D5C10 /* PLMusicPlayerNote.swift */,
-			);
-			path = DataStructures;
-			sourceTree = "<group>";
-		};
-		36ED66DD1982DB27001D5C10 /* PLMusicRepresentationHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66DE1982DB27001D5C10 /* MusicUtil+Finder.swift */,
-				36ED66DF1982DB27001D5C10 /* MusicUtil+NoteConverter.swift */,
-				36ED66E01982DB27001D5C10 /* MusicUtil+NotePicker.swift */,
-				36ED66E11982DB27001D5C10 /* MusicUtil+Scales.swift */,
-				36ED66E21982DB27001D5C10 /* MusicUtil+Transpose.swift */,
-				36ED66E31982DB27001D5C10 /* MusicUtil.swift */,
-				36E70C1C19A937A600DB306D /* MusicUtil+Measures.swift */,
-			);
-			path = PLMusicRepresentationHelpers;
-			sourceTree = "<group>";
-		};
-		36ED66E41982DB27001D5C10 /* PLRandomHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66E51982DB27001D5C10 /* RandomArrayExtension.swift */,
-			);
-			path = PLRandomHelpers;
-			sourceTree = "<group>";
-		};
-		36ED66E61982DB27001D5C10 /* PLRhythmSectionGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66E71982DB27001D5C10 /* ChordVoicer.swift */,
-				36ED66E81982DB27001D5C10 /* RhythmSectionGenerator.swift */,
-			);
-			path = PLRhythmSectionGenerator;
-			sourceTree = "<group>";
-		};
-		36ED66E91982DB27001D5C10 /* PLScoreCreator */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66EA1982DB27001D5C10 /* ScoreCreator.swift */,
-			);
-			path = PLScoreCreator;
-			sourceTree = "<group>";
-		};
-		36ED66EC1982DB27001D5C10 /* SongStructureGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				36ED66ED1982DB27001D5C10 /* SongComposer.swift */,
-			);
-			path = SongStructureGenerator;
 			sourceTree = "<group>";
 		};
 		36ED671C1982DBB6001D5C10 /* MusicGenerator */ = {
@@ -495,6 +509,7 @@
 				36ED671D1982DBF7001D5C10 /* MusicGenerator.swift */,
 				36ED671F1982DD07001D5C10 /* SongSection.swift */,
 				36ED67251982E1DD001D5C10 /* JukeBox.swift */,
+				36266E871A01BA0400AB66D0 /* SongForm.swift */,
 			);
 			path = MusicGenerator;
 			sourceTree = "<group>";
@@ -599,18 +614,16 @@
 			files = (
 				363B911D198314FE00E09133 /* ChordsViewController.storyboard in Resources */,
 				36ED668E1982D535001D5C10 /* Images.xcassets in Resources */,
-				36ED66F61982DB27001D5C10 /* Piano.sf2 in Resources */,
-				36ED66F01982DB27001D5C10 /* drums.sf2 in Resources */,
-				36ED66F31982DB27001D5C10 /* jazzBass.sf2 in Resources */,
-				36ED66F21982DB27001D5C10 /* Info.plist in Resources */,
-				36ED67191982DB27001D5C10 /* sax.sf2 in Resources */,
 				363B91131982F51100E09133 /* ChordCell.xib in Resources */,
-				36ED66F51982DB27001D5C10 /* MainViewController.xib in Resources */,
+				3698936019FDA8CF0070ACFA /* trumpet.sf2 in Resources */,
 				36ED66B01982DA26001D5C10 /* SectionsCollectionViewController.storyboard in Resources */,
 				36E70C1219A6C70C00DB306D /* NewSongGenerator.storyboard in Resources */,
-				36ED671B1982DB27001D5C10 /* trumpet.sf2 in Resources */,
+				3698933319FDA8CF0070ACFA /* Piano.sf2 in Resources */,
 				363B91101982F47600E09133 /* SheetMusicViewController.storyboard in Resources */,
+				3698935E19FDA8CF0070ACFA /* sax.sf2 in Resources */,
 				36E70C1619A907AE00DB306D /* SongSettings.storyboard in Resources */,
+				3698933019FDA8CF0070ACFA /* jazzBass.sf2 in Resources */,
+				3698932D19FDA8CF0070ACFA /* drums.sf2 in Resources */,
 				363B911F1983150700E09133 /* SingleChordViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,56 +675,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36ED67031982DB27001D5C10 /* RhythmChangesTwoChordGen.swift in Sources */,
-				36ED67051982DB27001D5C10 /* SubdominantChordGen.swift in Sources */,
-				36ED670F1982DB27001D5C10 /* MusicUtil+Finder.swift in Sources */,
-				36ED67061982DB27001D5C10 /* ToFlatVIIChordGen.swift in Sources */,
-				36ED67141982DB27001D5C10 /* MusicUtil.swift in Sources */,
-				36ED67001982DB27001D5C10 /* Circle5ChordGen.swift in Sources */,
 				36ED67201982DD07001D5C10 /* SongSection.swift in Sources */,
+				3698934019FDA8CF0070ACFA /* FiveOverOneEndingChordGen.swift in Sources */,
+				3698934719FDA8CF0070ACFA /* SubdominantChordGen.swift in Sources */,
+				3698935619FDA8CF0070ACFA /* MusicUtil+NotePicker.swift in Sources */,
 				36ED66AB1982D6FD001D5C10 /* AppDelegate.swift in Sources */,
-				36ED66FE1982DB27001D5C10 /* AscendingDimChordGen.swift in Sources */,
-				36ED67021982DB27001D5C10 /* RhythmChangesOneChordGen.swift in Sources */,
-				36ED66FB1982DB27001D5C10 /* ChordData.swift in Sources */,
-				36ED670B1982DB27001D5C10 /* MelodyRhythmGenerator.swift in Sources */,
 				36ED67261982E1DD001D5C10 /* JukeBox.swift in Sources */,
-				36ED67101982DB27001D5C10 /* MusicUtil+NoteConverter.swift in Sources */,
-				36ED670C1982DB27001D5C10 /* PLMusicPlayerNote.swift in Sources */,
-				36ED67041982DB27001D5C10 /* StrayCatStrutChordGen.swift in Sources */,
-				36ED670D1982DB27001D5C10 /* PLMusicPlayer.swift in Sources */,
-				36ED67011982DB27001D5C10 /* ClassicalStateMachineChordGen.swift in Sources */,
-				36ED67121982DB27001D5C10 /* MusicUtil+Scales.swift in Sources */,
-				36ED67131982DB27001D5C10 /* MusicUtil+Transpose.swift in Sources */,
-				36ED670A1982DB27001D5C10 /* JazzMelodyGenerator2.swift in Sources */,
-				36ED671A1982DB27001D5C10 /* SongComposer.swift in Sources */,
+				3698933619FDA8CF0070ACFA /* DrumGenerator.swift in Sources */,
+				3698934819FDA8CF0070ACFA /* ToFlatVIIChordGen.swift in Sources */,
+				3698935F19FDA8CF0070ACFA /* SongComposer.swift in Sources */,
+				3698935D19FDA8CF0070ACFA /* ScoreCreator.swift in Sources */,
+				3698933B19FDA8CF0070ACFA /* AscendingDimChordGen.swift in Sources */,
+				3698935819FDA8CF0070ACFA /* MusicUtil+Transpose.swift in Sources */,
+				3698935B19FDA8CF0070ACFA /* ChordVoicer.swift in Sources */,
 				363B910E1982F46B00E09133 /* SheetMusicViewController.swift in Sources */,
+				3698934919FDA8CF0070ACFA /* TwoFiveOneChordGen.swift in Sources */,
+				3698934219FDA8CF0070ACFA /* FlatSevenDiminishedEndingChordGen.swift in Sources */,
+				3698934D19FDA8CF0070ACFA /* JazzMelodyGenerator.swift in Sources */,
+				36266E881A01BA0400AB66D0 /* SongForm.swift in Sources */,
+				3698935719FDA8CF0070ACFA /* MusicUtil+Scales.swift in Sources */,
+				3698933719FDA8CF0070ACFA /* ChordFactory.swift in Sources */,
+				3698935019FDA8CF0070ACFA /* PLMusicPlayerNote.swift in Sources */,
+				3698934B19FDA8CF0070ACFA /* TwoSevenTwoFiveOneEndingChordGen.swift in Sources */,
+				3698933F19FDA8CF0070ACFA /* FiveOfFiveEndingChordGen.swift in Sources */,
+				3698934319FDA8CF0070ACFA /* RhythmChangesOneChordGen.swift in Sources */,
 				363B9119198314DB00E09133 /* ChordsViewController.swift in Sources */,
 				36E70C1919A907E400DB306D /* UIUtils.swift in Sources */,
-				36ED67071982DB27001D5C10 /* TwoFiveOneChordGen.swift in Sources */,
-				36ED66F81982DB27001D5C10 /* BasslineGenerator.swift in Sources */,
-				36ED67111982DB27001D5C10 /* MusicUtil+NotePicker.swift in Sources */,
-				36ED67081982DB27001D5C10 /* MelodyMeasure.swift in Sources */,
-				36ED67161982DB27001D5C10 /* ChordVoicer.swift in Sources */,
-				36ED66FD1982DB27001D5C10 /* JazzChordGenerator.swift in Sources */,
-				36ED67171982DB27001D5C10 /* RhythmSectionGenerator.swift in Sources */,
 				36E70C1419A907A300DB306D /* SongSettingsViewController.swift in Sources */,
-				36ED67151982DB27001D5C10 /* RandomArrayExtension.swift in Sources */,
+				3698934619FDA8CF0070ACFA /* StrayCatStrutChordGen.swift in Sources */,
+				3698935119FDA8CF0070ACFA /* PLMusicPlayer.swift in Sources */,
+				3698933E19FDA8CF0070ACFA /* ClassicalStateMachineChordGen.swift in Sources */,
+				3698935319FDA8CF0070ACFA /* MusicUtil+Finder.swift in Sources */,
+				3698934F19FDA8CF0070ACFA /* MelodyRhythmGenerator.swift in Sources */,
+				3698933D19FDA8CF0070ACFA /* Circle5ChordGen.swift in Sources */,
+				3698934119FDA8CF0070ACFA /* FiveSusChordEndingGen.swift in Sources */,
+				3698934419FDA8CF0070ACFA /* RhythmChangesTwoChordGen.swift in Sources */,
+				3698934E19FDA8CF0070ACFA /* JazzMelodyGenerator2.swift in Sources */,
+				3698934519FDA8CF0070ACFA /* SevenDimChordEndingGen.swift in Sources */,
+				3698933919FDA8CF0070ACFA /* ChordMeasure.swift in Sources */,
+				3698934C19FDA8CF0070ACFA /* MelodyMeasure.swift in Sources */,
 				36ED66AE1982D9D3001D5C10 /* SectionsCollectionViewController.swift in Sources */,
+				3698935419FDA8CF0070ACFA /* MusicUtil+Measures.swift in Sources */,
+				3698935519FDA8CF0070ACFA /* MusicUtil+NoteConverter.swift in Sources */,
+				3698934A19FDA8CF0070ACFA /* TwoFiveTwoFiveEndingChordGen.swift in Sources */,
+				3698933519FDA8CF0070ACFA /* BasslineGenerator.swift in Sources */,
+				3698933819FDA8CF0070ACFA /* ChordData.swift in Sources */,
 				363B91151982F61100E09133 /* ChordCell.swift in Sources */,
-				36ED66FA1982DB27001D5C10 /* ChordFactory.swift in Sources */,
+				3698935A19FDA8CF0070ACFA /* RandomArrayExtension.swift in Sources */,
 				36ED671E1982DBF7001D5C10 /* MusicGenerator.swift in Sources */,
+				3698935C19FDA8CF0070ACFA /* RhythmSectionGenerator.swift in Sources */,
+				3698935919FDA8CF0070ACFA /* MusicUtil.swift in Sources */,
+				3698933A19FDA8CF0070ACFA /* JazzChordGenerator.swift in Sources */,
 				363B911B198314F200E09133 /* SingleChordViewController.swift in Sources */,
 				36E70C1019A6C6FC00DB306D /* NewSongGeneratorViewController.swift in Sources */,
-				36E70C1D19A937A600DB306D /* MusicUtil+Measures.swift in Sources */,
+				3698933C19FDA8CF0070ACFA /* ChordGenProtocol.swift in Sources */,
 				36ED67241982DE99001D5C10 /* CurrentSongDataCenter.swift in Sources */,
-				36ED66FC1982DB27001D5C10 /* ChordMeasure.swift in Sources */,
-				36ED66F91982DB27001D5C10 /* DrumGenerator.swift in Sources */,
-				36ED67091982DB27001D5C10 /* JazzMelodyGenerator.swift in Sources */,
-				36ED66FF1982DB27001D5C10 /* ChordGenProtocol.swift in Sources */,
-				36ED67181982DB27001D5C10 /* ScoreCreator.swift in Sources */,
-				36ED670E1982DB27001D5C10 /* TestMusicPlayer.swift in Sources */,
-				36ED66F41982DB27001D5C10 /* MainViewController.swift in Sources */,
-				36ED66F71982DB27001D5C10 /* AccurateDispatchTimer.swift in Sources */,
+				3698935219FDA8CF0070ACFA /* TestMusicPlayer.swift in Sources */,
+				3698933419FDA8CF0070ACFA /* AccurateDispatchTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
