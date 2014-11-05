@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import JazzMusicGenerator
 
 struct SongSection {
   var chords: [ChordMeasure]

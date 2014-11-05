@@ -37,7 +37,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-sO-YxT">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
-                                        <state key="normal" title="Settings">
+                                        <state key="normal" title="Tempo / Instruments">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>

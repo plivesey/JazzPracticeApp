@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import JazzMusicGenerator
 
 class MusicGenerator {
   
@@ -25,6 +26,15 @@ class MusicGenerator {
           return SongComposer.generateMelodyForChordMeasures(chords, startNote: startNote, endNote: startNote)
         }
       }()
+
+      // DEBUG. Print out the melody
+//      for i in 0..<chords.count {
+//        print(chords[i])
+//        let melody: [String] = melody[i].notes.map { note in
+//          return MusicUtil.noteToString(note.note)
+//        }
+//        println("   \(melody)")
+//      }
       
       let bassline = BasslineGenerator.generateBasslineForChordMeasures(chords)
       let rhythm = RhythmSectionGenerator.rhythmSectionFromChords(chords)

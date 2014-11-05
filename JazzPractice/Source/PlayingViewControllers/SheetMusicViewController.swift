@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JazzMusicGenerator
 
 protocol SheetMusicDelegate {
   func sheeMusicFinished(_: SheetMusicViewController)

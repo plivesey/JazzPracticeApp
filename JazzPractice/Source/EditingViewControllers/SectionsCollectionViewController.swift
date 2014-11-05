@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JazzMusicGenerator
 
 class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NewSongGeneratorDelegate, SongSettingsDelegate {
   

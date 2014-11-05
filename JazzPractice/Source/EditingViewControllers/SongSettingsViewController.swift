@@ -27,8 +27,12 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
   let maxTempo = 200
   
   // UI
-  @IBOutlet var tableView: UITableView!
   @IBOutlet var pickerView: UIPickerView!
+  // Buttons
+  @IBOutlet var soloMuteButton: UIButton!
+  @IBOutlet var rhythmMuteButton: UIButton!
+  @IBOutlet var bassMuteButton: UIButton!
+  @IBOutlet var drumsMuteButton: UIButton!
   
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -41,9 +45,33 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
     
     edgesForExtendedLayout = .None
     
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    
     pickerView.selectRow(tempo - minTempo, inComponent: 0, animated: false)
+    
+    // Setup Mute Buttons
+    if mutedTracks[0].muted {
+      // Currently muted
+      soloMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      soloMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
+    }
+    if mutedTracks[1].muted {
+      // Currently muted
+      rhythmMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      rhythmMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
+    }
+    if mutedTracks[2].muted {
+      // Currently muted
+      bassMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      bassMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
+    }
+    if mutedTracks[3].muted {
+      // Currently muted
+      drumsMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      drumsMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
+    }
   }
   
   override func viewWillDisappear(animated: Bool) {
@@ -92,6 +120,49 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
       cell?.accessoryType = .Checkmark
     } else {
       cell?.accessoryType = .None
+    }
+  }
+}
+
+extension SongSettingsViewController {
+  
+  @IBAction func soloMuteButtonPressed(button: UIButton) {
+    mutedTracks[0].muted = !mutedTracks[0].muted
+    if mutedTracks[0].muted {
+      // Currently muted
+      soloMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      soloMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
+    }
+  }
+  
+  @IBAction func rhythmMuteButtonPressed(button: UIButton) {
+    mutedTracks[1].muted = !mutedTracks[1].muted
+    if mutedTracks[1].muted {
+      // Currently muted
+      rhythmMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      rhythmMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
+    }
+  }
+  
+  @IBAction func bassMuteButtonPressed(button: UIButton) {
+    mutedTracks[2].muted = !mutedTracks[2].muted
+    if mutedTracks[2].muted {
+      // Currently muted
+      bassMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      bassMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
+    }
+  }
+  
+  @IBAction func drumsMuteButtonPressed(button: UIButton) {
+    mutedTracks[3].muted = !mutedTracks[3].muted
+    if mutedTracks[3].muted {
+      // Currently muted
+      drumsMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
+    } else {
+      drumsMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
     }
   }
 }

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zah-vD-PKj">
-                                <rect key="frame" x="16" y="28" width="568" height="216"/>
+                                <rect key="frame" x="16" y="20" width="568" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="Wkw-YJ-K81"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-cJ-yRI">
-                                <rect key="frame" x="16" y="252" width="568" height="216"/>
+                                <rect key="frame" x="16" y="216" width="568" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="P0U-tQ-gF6"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="216" id="hXQ-PJ-9kc"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-aD-agg">
-                                <rect key="frame" x="25" y="476" width="550" height="40"/>
+                                <rect key="frame" x="25" y="422" width="550" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1BW-Bk-Sn0"/>
                                 </constraints>
@@ -55,11 +55,11 @@
                         <constraints>
                             <constraint firstItem="Jwj-aD-agg" firstAttribute="leading" secondItem="Sis-Pi-ofD" secondAttribute="leadingMargin" constant="9" id="0dp-YD-jsd"/>
                             <constraint firstItem="zah-vD-PKj" firstAttribute="leading" secondItem="Sis-Pi-ofD" secondAttribute="leadingMargin" id="2I7-uu-QZA"/>
-                            <constraint firstItem="ZbP-cJ-yRI" firstAttribute="top" secondItem="zah-vD-PKj" secondAttribute="bottom" constant="8" id="HT4-EY-Q4Z"/>
-                            <constraint firstItem="zah-vD-PKj" firstAttribute="top" secondItem="Dga-Jm-fux" secondAttribute="bottom" constant="8" id="JFl-jD-XUK"/>
+                            <constraint firstItem="ZbP-cJ-yRI" firstAttribute="top" secondItem="zah-vD-PKj" secondAttribute="bottom" constant="-20" id="HT4-EY-Q4Z"/>
+                            <constraint firstItem="zah-vD-PKj" firstAttribute="top" secondItem="Dga-Jm-fux" secondAttribute="bottom" id="JFl-jD-XUK"/>
                             <constraint firstItem="ZbP-cJ-yRI" firstAttribute="leading" secondItem="Sis-Pi-ofD" secondAttribute="leadingMargin" id="XdW-pG-f8s"/>
                             <constraint firstItem="ZbP-cJ-yRI" firstAttribute="trailing" secondItem="Sis-Pi-ofD" secondAttribute="trailingMargin" id="fOb-v2-j7K"/>
-                            <constraint firstItem="Jwj-aD-agg" firstAttribute="top" secondItem="ZbP-cJ-yRI" secondAttribute="bottom" constant="8" id="ktg-H3-53O"/>
+                            <constraint firstItem="Jwj-aD-agg" firstAttribute="top" secondItem="ZbP-cJ-yRI" secondAttribute="bottom" constant="-10" id="ktg-H3-53O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jwj-aD-agg" secondAttribute="trailing" constant="9" id="qbH-kv-Wzz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zah-vD-PKj" secondAttribute="trailing" id="yGo-s0-2vQ"/>
                         </constraints>
