@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import JazzMusicGenerator
 
-class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource, UIPickerViewDataSource {
+class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
   
   var tempo: Int = 120 {
     didSet {
@@ -19,7 +20,7 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
       }
     }
   }
-  var mutedTracks: [(name: String, muted: Bool)] = []
+  var tracks: [(name: String, muted: Bool, instrument: PLMusicPlayer.InstrumentType)] = []
   
   weak var delegate: SongSettingsDelegate?
   
@@ -33,6 +34,8 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
   @IBOutlet var rhythmMuteButton: UIButton!
   @IBOutlet var bassMuteButton: UIButton!
   @IBOutlet var drumsMuteButton: UIButton!
+  @IBOutlet var soloInstrumentButton: UIButton!
+  @IBOutlet var rhythmInstrumentButton: UIButton!
   
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -48,35 +51,39 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
     pickerView.selectRow(tempo - minTempo, inComponent: 0, animated: false)
     
     // Setup Mute Buttons
-    if mutedTracks[0].muted {
+    if tracks[0].muted {
       // Currently muted
       soloMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
       soloMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
     }
-    if mutedTracks[1].muted {
+    if tracks[1].muted {
       // Currently muted
       rhythmMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
       rhythmMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
     }
-    if mutedTracks[2].muted {
+    if tracks[2].muted {
       // Currently muted
       bassMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
       bassMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
     }
-    if mutedTracks[3].muted {
+    if tracks[3].muted {
       // Currently muted
       drumsMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
       drumsMuteButton.setImage(UIImage(named: "audioUnmute"), forState: .Normal)
     }
+    
+    soloInstrumentButton.setTitle(tracks[0].instrument.description, forState: .Normal)
+    rhythmInstrumentButton.setTitle(tracks[1].instrument.description, forState: .Normal)
   }
   
   override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
     let tempo = pickerView.selectedRowInComponent(0) + minTempo
-    delegate?.songSettingsViewController(self, finishedWithTempo: tempo, mutedTracks: mutedTracks)
+    delegate?.songSettingsViewController(self, finishedWithTempo: tempo, tracks: tracks)
   }
   
   // Picker Delegate
@@ -92,43 +99,13 @@ class SongSettingsViewController: UIViewController, UIPickerViewDelegate, UITabl
   func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
     return String(row + minTempo)
   }
-  
-  // Table view delegate
-  
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return mutedTracks.count
-  }
-  
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-    cell.textLabel.text = mutedTracks[indexPath.row].name
-    if mutedTracks[indexPath.row].muted {
-      cell.accessoryType = .Checkmark
-    } else {
-      cell.accessoryType = .None
-    }
-    return cell
-  }
-  
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    let row = indexPath.row
-    mutedTracks[row] = (mutedTracks[row].name, !mutedTracks[row].muted)
-    
-    let cell = tableView.cellForRowAtIndexPath(indexPath)
-    if mutedTracks[row].muted {
-      cell?.accessoryType = .Checkmark
-    } else {
-      cell?.accessoryType = .None
-    }
-  }
 }
 
 extension SongSettingsViewController {
   
   @IBAction func soloMuteButtonPressed(button: UIButton) {
-    mutedTracks[0].muted = !mutedTracks[0].muted
-    if mutedTracks[0].muted {
+    tracks[0].muted = !tracks[0].muted
+    if tracks[0].muted {
       // Currently muted
       soloMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
@@ -137,8 +114,8 @@ extension SongSettingsViewController {
   }
   
   @IBAction func rhythmMuteButtonPressed(button: UIButton) {
-    mutedTracks[1].muted = !mutedTracks[1].muted
-    if mutedTracks[1].muted {
+    tracks[1].muted = !tracks[1].muted
+    if tracks[1].muted {
       // Currently muted
       rhythmMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
@@ -147,8 +124,8 @@ extension SongSettingsViewController {
   }
   
   @IBAction func bassMuteButtonPressed(button: UIButton) {
-    mutedTracks[2].muted = !mutedTracks[2].muted
-    if mutedTracks[2].muted {
+    tracks[2].muted = !tracks[2].muted
+    if tracks[2].muted {
       // Currently muted
       bassMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
@@ -157,8 +134,8 @@ extension SongSettingsViewController {
   }
   
   @IBAction func drumsMuteButtonPressed(button: UIButton) {
-    mutedTracks[3].muted = !mutedTracks[3].muted
-    if mutedTracks[3].muted {
+    tracks[3].muted = !tracks[3].muted
+    if tracks[3].muted {
       // Currently muted
       drumsMuteButton.setImage(UIImage(named: "audioMute"), forState: .Normal)
     } else {
@@ -167,7 +144,61 @@ extension SongSettingsViewController {
   }
 }
 
+extension SongSettingsViewController {
+  func nextSoloInstrument() -> PLMusicPlayer.InstrumentType {
+    switch tracks[0].instrument {
+    case .Piano:
+      return .Sax
+    case .Sax:
+      return .Guitar
+    case .Guitar:
+      return .Trombone
+    case .Trombone:
+      return .Piano
+    case .Bass:
+      assert(false)
+      return .Piano
+    case .Drums:
+      assert(false)
+      return .Piano
+    }
+  }
+  
+  func nextRhythmInstrument() -> PLMusicPlayer.InstrumentType {
+    switch tracks[1].instrument {
+    case .Piano:
+      return .Guitar
+    case .Guitar:
+      return .Piano
+    case .Trombone:
+      assert(false)
+      return .Piano
+    case .Sax:
+      assert(false)
+      return .Piano
+    case .Bass:
+      assert(false)
+      return .Piano
+    case .Drums:
+      assert(false)
+      return .Piano
+    }
+  }
+  
+  @IBAction func changeSoloInstrumentTapped() {
+    let newInstrument = nextSoloInstrument()
+    tracks[0].instrument = newInstrument
+    soloInstrumentButton.setTitle(newInstrument.description, forState: .Normal)
+  }
+  
+  @IBAction func changeRhythmInstrumentTapped() {
+    let newInstrument = nextRhythmInstrument()
+    tracks[1].instrument = newInstrument
+    rhythmInstrumentButton.setTitle(newInstrument.description, forState: .Normal)
+  }
+}
+
 protocol SongSettingsDelegate: NSObjectProtocol {
   
-  func songSettingsViewController(viewController: SongSettingsViewController, finishedWithTempo tempo: Int, mutedTracks: [(name: String, muted: Bool)])
+  func songSettingsViewController(viewController: SongSettingsViewController, finishedWithTempo tempo: Int, tracks: [(name: String, muted: Bool, instrument: PLMusicPlayer.InstrumentType)])
 }

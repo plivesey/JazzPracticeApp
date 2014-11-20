@@ -19,7 +19,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o40-xD-Baf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="1" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lkK-xK-uj9">
                                     <size key="itemSize" width="160" height="60"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.9006696428571429" green="0.86996499594155852" blue="0.86996499594155852" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="DcS-sO-YxT" firstAttribute="top" secondItem="lf4-tn-Fvs" secondAttribute="top" id="0CT-29-Ayt"/>
                                     <constraint firstAttribute="trailing" secondItem="yoa-hD-Nbx" secondAttribute="trailing" id="56o-RK-C8r"/>

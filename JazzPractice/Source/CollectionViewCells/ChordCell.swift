@@ -11,6 +11,11 @@ import UIKit
 class ChordCell: UICollectionViewCell {
 
   @IBOutlet var textLabel: UILabel!
-  @IBOutlet var sectionLabel: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    
+    textLabel.font = JazzChordFontTextProvider.jazzFontOfSize(textLabel.font.pointSize)
+  }
   
 }

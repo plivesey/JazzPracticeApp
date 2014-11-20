@@ -12,6 +12,7 @@ class NewSongGeneratorViewController: UIViewController, UIPickerViewDataSource, 
   
   @IBOutlet var keyPickerView: UIPickerView!
   @IBOutlet var formPickerView: UIPickerView!
+  @IBOutlet var verticalConstraints: [NSLayoutConstraint]!
   
   weak var delegate: NewSongGeneratorDelegate?
   
@@ -35,14 +36,42 @@ class NewSongGeneratorViewController: UIViewController, UIPickerViewDataSource, 
     keyPickerView.selectRow(1, inComponent: 1, animated: false)
     formPickerView.selectRow(1, inComponent: 0, animated: false)
     formPickerView.selectRow(1, inComponent: 1, animated: false)
+    
+    // If we're on a small screen, let's bunch up the elements a bit (iPhone 4s)
+    if view.frame.size.height <= 480 {
+      for constraint in verticalConstraints {
+        constraint.constant = constraint.constant - 15
+      }
+    }
   }
   
   @IBAction func generateTapped() {
-    let key = keyPickerView.selectedRowInComponent(0) - 1
-    let numberOfMeasures = numMeasures[keyPickerView.selectedRowInComponent(1) - 1]
-    let songForm = SongForm.allForms()[formPickerView.selectedRowInComponent(0) - 1]
+    let key: Int = {
+      let row = self.keyPickerView.selectedRowInComponent(0)
+      if row == 0 {
+        return 0
+      } else {
+        return row - 1
+      }
+    }()
+    let numberOfMeasures: Int = {
+      let row = self.keyPickerView.selectedRowInComponent(1)
+      if row == 0 {
+        return self.numMeasures[0]
+      } else {
+        return self.numMeasures[row - 1]
+      }
+    }()
+    let songForm: SongForm = {
+      let row = self.formPickerView.selectedRowInComponent(0)
+      if row == 0 {
+        return SongForm.allForms()[0]
+      } else {
+        return SongForm.allForms()[row - 1]
+      }
+    }()
     let numberOfSections = songForm.numberOfSections()
-    let numberOfRepeats = formPickerView.selectedRowInComponent(1)
+    let numberOfRepeats = formPickerView.selectedRowInComponent(1) == 0 ? 1 : formPickerView.selectedRowInComponent(1)
     
     let sections = MusicGenerator.generateSectionsWithKey(key, numberOfMeasures: numberOfMeasures, numberOfSections: numberOfSections)
     CurrentSongDataCenter.sharedInstance.currentSong = SongData(sections: sections, form: songForm, repeat: numberOfRepeats)
@@ -83,7 +112,7 @@ class NewSongGeneratorViewController: UIViewController, UIPickerViewDataSource, 
       // It's a title row
       if pickerView == keyPickerView {
         if component == 0 {
-          return "Key"
+          return "Key (Major)"
         } else {
           return "# Measures"
         }

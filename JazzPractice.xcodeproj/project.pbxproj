@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		189A5997881C46C0A31EA7CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6684E807DFB3424EAB2B204A /* libPods.a */; };
 		36266E881A01BA0400AB66D0 /* SongForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36266E871A01BA0400AB66D0 /* SongForm.swift */; };
+		362A84641A143C4F00A41EE0 /* ChordSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A84631A143C4F00A41EE0 /* ChordSectionHeader.xib */; };
+		362A84671A143D9C00A41EE0 /* ChordSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362A84661A143D9C00A41EE0 /* ChordSectionHeader.swift */; };
 		363B910E1982F46B00E09133 /* SheetMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B910D1982F46B00E09133 /* SheetMusicViewController.swift */; };
 		363B91101982F47600E09133 /* SheetMusicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */; };
 		363B91131982F51100E09133 /* ChordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363B91121982F51100E09133 /* ChordCell.xib */; };
@@ -17,6 +19,15 @@
 		363B911B198314F200E09133 /* SingleChordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B911A198314F200E09133 /* SingleChordViewController.swift */; };
 		363B911D198314FE00E09133 /* ChordsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B911C198314FD00E09133 /* ChordsViewController.storyboard */; };
 		363B911F1983150700E09133 /* SingleChordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B911E1983150700E09133 /* SingleChordViewController.storyboard */; };
+		3667CD181A1D820200E8F7A7 /* JazzChordFontTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667CD171A1D820200E8F7A7 /* JazzChordFontTextProvider.swift */; };
+		3667CD391A1D987A00E8F7A7 /* drums.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD301A1D987A00E8F7A7 /* drums.sf2 */; };
+		3667CD3A1A1D987A00E8F7A7 /* jazz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD311A1D987A00E8F7A7 /* jazz.ttf */; };
+		3667CD3B1A1D987A00E8F7A7 /* jazzBass.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD321A1D987A00E8F7A7 /* jazzBass.sf2 */; };
+		3667CD3C1A1D987A00E8F7A7 /* jazzGuitar.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD331A1D987A00E8F7A7 /* jazzGuitar.sf2 */; };
+		3667CD3E1A1D987A00E8F7A7 /* Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD351A1D987A00E8F7A7 /* Piano.sf2 */; };
+		3667CD3F1A1D987A00E8F7A7 /* sax.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD361A1D987A00E8F7A7 /* sax.sf2 */; };
+		3667CD4B1A1D99E100E8F7A7 /* trombone.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD4A1A1D99E100E8F7A7 /* trombone.sf2 */; };
+		3667CD4D1A1D9D1F00E8F7A7 /* JazzMusicGenerator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 364E5B9B1A0933AC00591789 /* JazzMusicGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36E70C1019A6C6FC00DB306D /* NewSongGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C0F19A6C6FC00DB306D /* NewSongGeneratorViewController.swift */; };
 		36E70C1219A6C70C00DB306D /* NewSongGenerator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E70C1119A6C70C00DB306D /* NewSongGenerator.storyboard */; };
 		36E70C1419A907A300DB306D /* SongSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C1319A907A300DB306D /* SongSettingsViewController.swift */; };
@@ -64,8 +75,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3667CD4C1A1D9CDB00E8F7A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3667CD4D1A1D9D1F00E8F7A7 /* JazzMusicGenerator.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		36266E871A01BA0400AB66D0 /* SongForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongForm.swift; sourceTree = "<group>"; };
+		362A84631A143C4F00A41EE0 /* ChordSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordSectionHeader.xib; sourceTree = "<group>"; };
+		362A84661A143D9C00A41EE0 /* ChordSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordSectionHeader.swift; sourceTree = "<group>"; };
 		363B910D1982F46B00E09133 /* SheetMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetMusicViewController.swift; sourceTree = "<group>"; };
 		363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetMusicViewController.storyboard; sourceTree = "<group>"; };
 		363B91121982F51100E09133 /* ChordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordCell.xib; sourceTree = "<group>"; };
@@ -75,6 +101,14 @@
 		363B911C198314FD00E09133 /* ChordsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChordsViewController.storyboard; sourceTree = "<group>"; };
 		363B911E1983150700E09133 /* SingleChordViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingleChordViewController.storyboard; sourceTree = "<group>"; };
 		364E5B951A0933AC00591789 /* JazzMusicGenerator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JazzMusicGenerator.xcodeproj; path = ../../TestAudio/JazzMusicGenerator.xcodeproj; sourceTree = "<group>"; };
+		3667CD171A1D820200E8F7A7 /* JazzChordFontTextProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JazzChordFontTextProvider.swift; sourceTree = "<group>"; };
+		3667CD301A1D987A00E8F7A7 /* drums.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.sf2; sourceTree = "<group>"; };
+		3667CD311A1D987A00E8F7A7 /* jazz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jazz.ttf; sourceTree = "<group>"; };
+		3667CD321A1D987A00E8F7A7 /* jazzBass.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = jazzBass.sf2; sourceTree = "<group>"; };
+		3667CD331A1D987A00E8F7A7 /* jazzGuitar.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = jazzGuitar.sf2; sourceTree = "<group>"; };
+		3667CD351A1D987A00E8F7A7 /* Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.sf2; sourceTree = "<group>"; };
+		3667CD361A1D987A00E8F7A7 /* sax.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sax.sf2; sourceTree = "<group>"; };
+		3667CD4A1A1D99E100E8F7A7 /* trombone.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trombone.sf2; sourceTree = "<group>"; };
 		36E70C0F19A6C6FC00DB306D /* NewSongGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSongGeneratorViewController.swift; sourceTree = "<group>"; };
 		36E70C1119A6C70C00DB306D /* NewSongGenerator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSongGenerator.storyboard; sourceTree = "<group>"; };
 		36E70C1319A907A300DB306D /* SongSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSettingsViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +128,8 @@
 		36ED67231982DE99001D5C10 /* CurrentSongDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentSongDataCenter.swift; sourceTree = "<group>"; };
 		36ED67251982E1DD001D5C10 /* JukeBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeBox.swift; sourceTree = "<group>"; };
 		6684E807DFB3424EAB2B204A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6B09F7822F94B5C984F47AD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7A13FE0CD42978B43F71D147 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		95F34653D7487D8CF87862F5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +165,8 @@
 			children = (
 				363B91141982F61100E09133 /* ChordCell.swift */,
 				363B91121982F51100E09133 /* ChordCell.xib */,
+				362A84661A143D9C00A41EE0 /* ChordSectionHeader.swift */,
+				362A84631A143C4F00A41EE0 /* ChordSectionHeader.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -141,6 +178,20 @@
 				364E5B9D1A0933AC00591789 /* JazzMusicGeneratorTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3667CD131A1D7FD300E8F7A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3667CD301A1D987A00E8F7A7 /* drums.sf2 */,
+				3667CD311A1D987A00E8F7A7 /* jazz.ttf */,
+				3667CD321A1D987A00E8F7A7 /* jazzBass.sf2 */,
+				3667CD331A1D987A00E8F7A7 /* jazzGuitar.sf2 */,
+				3667CD351A1D987A00E8F7A7 /* Piano.sf2 */,
+				3667CD361A1D987A00E8F7A7 /* sax.sf2 */,
+				3667CD4A1A1D99E100E8F7A7 /* trombone.sf2 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		36E70C1719A907C400DB306D /* Utils */ = {
@@ -157,8 +208,8 @@
 				36ED66831982D535001D5C10 /* JazzPractice */,
 				36ED66961982D535001D5C10 /* JazzPracticeTests */,
 				36ED66821982D535001D5C10 /* Products */,
-				C6B09F7822F94B5C984F47AD /* Pods.xcconfig */,
 				CCADC81EA03F42E5804B3290 /* Frameworks */,
+				AB973F1F71F79F3B9219E028 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +228,7 @@
 				364E5B951A0933AC00591789 /* JazzMusicGenerator.xcodeproj */,
 				36ED66A31982D697001D5C10 /* Source */,
 				36ED668D1982D535001D5C10 /* Images.xcassets */,
+				3667CD131A1D7FD300E8F7A7 /* Resources */,
 				36ED66841982D535001D5C10 /* Supporting Files */,
 			);
 			path = JazzPractice;
@@ -261,8 +313,18 @@
 			isa = PBXGroup;
 			children = (
 				36ED67231982DE99001D5C10 /* CurrentSongDataCenter.swift */,
+				3667CD171A1D820200E8F7A7 /* JazzChordFontTextProvider.swift */,
 			);
 			path = DataCenters;
+			sourceTree = "<group>";
+		};
+		AB973F1F71F79F3B9219E028 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A13FE0CD42978B43F71D147 /* Pods.debug.xcconfig */,
+				95F34653D7487D8CF87862F5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CCADC81EA03F42E5804B3290 /* Frameworks */ = {
@@ -285,6 +347,7 @@
 				36ED667E1982D535001D5C10 /* Frameworks */,
 				36ED667F1982D535001D5C10 /* Resources */,
 				E4600BF993EB45F8B2D22317 /* Copy Pods Resources */,
+				3667CD4C1A1D9CDB00E8F7A7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -380,11 +443,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				363B911D198314FE00E09133 /* ChordsViewController.storyboard in Resources */,
+				3667CD391A1D987A00E8F7A7 /* drums.sf2 in Resources */,
+				3667CD4B1A1D99E100E8F7A7 /* trombone.sf2 in Resources */,
+				362A84641A143C4F00A41EE0 /* ChordSectionHeader.xib in Resources */,
 				36ED668E1982D535001D5C10 /* Images.xcassets in Resources */,
 				363B91131982F51100E09133 /* ChordCell.xib in Resources */,
+				3667CD3E1A1D987A00E8F7A7 /* Piano.sf2 in Resources */,
+				3667CD3F1A1D987A00E8F7A7 /* sax.sf2 in Resources */,
+				3667CD3C1A1D987A00E8F7A7 /* jazzGuitar.sf2 in Resources */,
 				36ED66B01982DA26001D5C10 /* SectionsCollectionViewController.storyboard in Resources */,
 				36E70C1219A6C70C00DB306D /* NewSongGenerator.storyboard in Resources */,
+				3667CD3A1A1D987A00E8F7A7 /* jazz.ttf in Resources */,
 				363B91101982F47600E09133 /* SheetMusicViewController.storyboard in Resources */,
+				3667CD3B1A1D987A00E8F7A7 /* jazzBass.sf2 in Resources */,
 				36E70C1619A907AE00DB306D /* SongSettings.storyboard in Resources */,
 				363B911F1983150700E09133 /* SingleChordViewController.storyboard in Resources */,
 			);
@@ -427,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -437,12 +508,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3667CD181A1D820200E8F7A7 /* JazzChordFontTextProvider.swift in Sources */,
 				36ED67201982DD07001D5C10 /* SongSection.swift in Sources */,
 				36ED66AB1982D6FD001D5C10 /* AppDelegate.swift in Sources */,
 				36ED67261982E1DD001D5C10 /* JukeBox.swift in Sources */,
 				363B910E1982F46B00E09133 /* SheetMusicViewController.swift in Sources */,
 				36266E881A01BA0400AB66D0 /* SongForm.swift in Sources */,
 				363B9119198314DB00E09133 /* ChordsViewController.swift in Sources */,
+				362A84671A143D9C00A41EE0 /* ChordSectionHeader.swift in Sources */,
 				36E70C1919A907E400DB306D /* UIUtils.swift in Sources */,
 				36E70C1419A907A300DB306D /* SongSettingsViewController.swift in Sources */,
 				36ED66AE1982D9D3001D5C10 /* SectionsCollectionViewController.swift in Sources */,
@@ -559,7 +632,7 @@
 		};
 		36ED669E1982D535001D5C10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6B09F7822F94B5C984F47AD /* Pods.xcconfig */;
+			baseConfigurationReference = 7A13FE0CD42978B43F71D147 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -572,7 +645,7 @@
 		};
 		36ED669F1982D535001D5C10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6B09F7822F94B5C984F47AD /* Pods.xcconfig */;
+			baseConfigurationReference = 95F34653D7487D8CF87862F5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

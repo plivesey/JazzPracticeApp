@@ -14,12 +14,12 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   var editingIndex = -1
   
   var tempo = 120
-  var mutedTracks: [(name: String, muted: Bool)] =
+  var tracks: [(name: String, muted: Bool, instrument: PLMusicPlayer.InstrumentType)] =
   [
-    ("Solo", false),
-    ("Rhythm", false),
-    ("Bass", false),
-    ("Drums", false)
+    ("Solo", false, .Piano),
+    ("Rhythm", false, .Piano),
+    ("Bass", false, .Bass),
+    ("Drums", false, .Drums)
   ]
   
   var chords: [[ChordMeasure]] {
@@ -43,6 +43,7 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
     edgesForExtendedLayout = UIRectEdge.None
     
     collectionView.registerNib(UINib(nibName: "ChordCell", bundle: nil), forCellWithReuseIdentifier: "ChordCell")
+    collectionView.registerNib(UINib(nibName: "ChordSectionHeader", bundle: nil), forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier:"HeaderView")
     
     let generateButton = UIBarButtonItem(title: "New Song", style: .Plain, target: self, action: "generateTapped")
     navigationItem.leftBarButtonItem = generateButton
@@ -72,25 +73,19 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ChordCell", forIndexPath: indexPath) as ChordCell
     
     let chordMeasure = chords[indexPath.section][indexPath.row]
-    cell.textLabel.text = "\(chordMeasure)"
-    if indexPath.row == 0 {
-      cell.sectionLabel.text = {
-        switch indexPath.section {
-        case 0:
-          return "A"
-        case 1:
-          return "B"
-        case 2:
-          return "C"
-        default:
-          return "?"
-        }
-      }()
-    } else {
-      cell.sectionLabel.text = ""
-    }
+    cell.textLabel.text = JazzChordFontTextProvider.textFromChordMeasure(chordMeasure)
     
     return cell
+  }
+  
+  func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as ChordSectionHeader
+    if indexPath.section == 0 {
+      header.mainTextLabel.text = "A"
+    } else if indexPath.section == 1 {
+      header.mainTextLabel.text = "B"
+    }
+    return header
   }
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -99,19 +94,42 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   }
   
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    return CGSize(width: 160, height: 60)
+    return CGSize(width: cellWidth(), height: 60)
   }
   
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    return CGSize(width: view.frame.size.width, height: 44)
+  }
+  
+  // MARK: - Helpers
+  
+  func cellWidth() -> CGFloat {
+    var width = collectionView.frame.size.width
+    var divider: CGFloat = 1
+    while true {
+      divider++
+      let newWidth = collectionView.frame.size.width / divider
+      if newWidth < 160 {
+        return width
+      }
+      width = newWidth
+    }
+  }
+  
+  
   /*
-  Action Methods
+  MAKR: - Action Methods
   */
   
   @IBAction func play() {
     let secondsPerBeat = Float(60) / Float(tempo)
-    let muted: [Bool] = mutedTracks.map { instrument in
+    let muted: [Bool] = tracks.map { instrument in
       return instrument.muted
     }
-    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, muted: muted, secondsPerBeat: secondsPerBeat)
+    let instruments: [PLMusicPlayer.InstrumentType] = tracks.map { instrument in
+      return instrument.instrument
+    }
+    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, muted: muted, instrumentTypes: instruments, secondsPerBeat: secondsPerBeat)
     
     UIView.animateWithDuration(0.3) {
       self.bottomBarYConstraint.constant = -self.bottomBarView.frame.size.height
@@ -132,7 +150,7 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   @IBAction func settingsTapped() {
     let settingsViewController = UIUtils.viewControllerNamed("SongSettings") as SongSettingsViewController
     settingsViewController.tempo = tempo
-    settingsViewController.mutedTracks = mutedTracks
+    settingsViewController.tracks = tracks
     settingsViewController.delegate = self
     navigationController?.pushViewController(settingsViewController, animated: true)
   }
@@ -144,8 +162,8 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   }
   
   // Song settings delegate
-  func songSettingsViewController(viewController: SongSettingsViewController, finishedWithTempo tempo: Int, mutedTracks: [(name: String, muted: Bool)]) {
+  func songSettingsViewController(viewController: SongSettingsViewController, finishedWithTempo tempo: Int, tracks: [(name: String, muted: Bool, instrument: PLMusicPlayer.InstrumentType)]) {
     self.tempo = tempo
-    self.mutedTracks = mutedTracks
+    self.tracks = tracks
   }
 }

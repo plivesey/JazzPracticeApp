@@ -71,7 +71,7 @@ class SheetMusicViewController: UIViewController, UICollectionViewDataSource, UI
       unwrappedMuted = muted
     }
     
-    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, muted: unwrappedMuted, secondsPerBeat: unwrappedTemp)
+//    JukeBox.sharedInstance.playMusic(CurrentSongDataCenter.sharedInstance.currentSong, muted: unwrappedMuted, secondsPerBeat: unwrappedTemp)
   }
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

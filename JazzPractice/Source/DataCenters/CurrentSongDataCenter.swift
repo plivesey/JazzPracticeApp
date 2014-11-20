@@ -12,7 +12,7 @@ class CurrentSongDataCenter {
   
   var currentSong: SongData = {
     // Default
-    let sections = MusicGenerator.generateSectionsWithKey(0, numberOfMeasures: 12, numberOfSections: 2)
+    let sections = MusicGenerator.generateSectionsWithKey(0, numberOfMeasures: 8, numberOfSections: 2)
     return SongData(sections: sections, form: .ABA, repeat: 1)
   }()
   

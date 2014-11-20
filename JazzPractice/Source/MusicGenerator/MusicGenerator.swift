@@ -26,8 +26,12 @@ class MusicGenerator {
           return SongComposer.generateMelodyForChordMeasures(chords, startNote: startNote, endNote: startNote)
         }
       }()
-
-      // DEBUG. Print out the melody
+      
+      let bassline = BasslineGenerator.generateBasslineForChordMeasures(chords)
+      let rhythm = RhythmSectionGenerator.rhythmSectionFromChords(chords)
+      let drums = DrumGenerator.generateDrums(numberOfMeasures: chords.count)
+      
+//      // DEBUG. Print out the melody
 //      for i in 0..<chords.count {
 //        print(chords[i])
 //        let melody: [String] = melody[i].notes.map { note in
@@ -36,9 +40,14 @@ class MusicGenerator {
 //        println("   \(melody)")
 //      }
       
-      let bassline = BasslineGenerator.generateBasslineForChordMeasures(chords)
-      let rhythm = RhythmSectionGenerator.rhythmSectionFromChords(chords)
-      let drums = DrumGenerator.generateDrums(numberOfMeasures: chords.count)
+      // DEBUG. Print out the bassline.
+      for i in 0..<chords.count {
+        print(chords[i])
+        let bass: [String] = bassline[i].notes.map { note in
+          return MusicUtil.noteToString(note.note)
+        }
+        println("   \(bass)")
+      }
       
       sections.append(SongSection(chords: chords, melody: melody, rhythm: rhythm, bass: bassline, drums: drums))
     }

@@ -67,6 +67,9 @@
                     <connections>
                         <outlet property="formPickerView" destination="ZbP-cJ-yRI" id="QUS-qE-BGw"/>
                         <outlet property="keyPickerView" destination="zah-vD-PKj" id="4go-ne-9UA"/>
+                        <outletCollection property="verticalConstraints" destination="JFl-jD-XUK" collectionClass="NSMutableArray" id="Xjp-V8-2Pe"/>
+                        <outletCollection property="verticalConstraints" destination="HT4-EY-Q4Z" collectionClass="NSMutableArray" id="Axk-An-PZj"/>
+                        <outletCollection property="verticalConstraints" destination="ktg-H3-53O" collectionClass="NSMutableArray" id="aYK-kv-Hqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnt-bc-0h4" userLabel="First Responder" sceneMemberID="firstResponder"/>

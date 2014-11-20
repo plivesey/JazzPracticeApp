@@ -1,3 +1,2 @@
 pod 'Isaac'
-pod 'CocoaLumberjack'
 
