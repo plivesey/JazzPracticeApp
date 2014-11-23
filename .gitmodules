@@ -1,0 +1,3 @@
+[submodule "SwiftSubmodules/Armchair"]
+	path = SwiftSubmodules/Armchair
+	url = https://github.com/UrbanApps/Armchair.git

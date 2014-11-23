@@ -11,6 +11,7 @@ import UIKit
 class ChordCell: UICollectionViewCell {
 
   @IBOutlet var textLabel: UILabel!
+  @IBOutlet weak var measureLine: UIView!
   
   override func awakeFromNib() {
     super.awakeFromNib()

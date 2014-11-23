@@ -8,6 +8,7 @@
 
 import UIKit
 import JazzMusicGenerator
+import Armchair
 
 class SectionsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NewSongGeneratorDelegate, SongSettingsDelegate {
   
@@ -46,7 +47,10 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
     collectionView.registerNib(UINib(nibName: "ChordSectionHeader", bundle: nil), forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier:"HeaderView")
     
     let generateButton = UIBarButtonItem(title: "New Song", style: .Plain, target: self, action: "generateTapped")
-    navigationItem.leftBarButtonItem = generateButton
+    navigationItem.rightBarButtonItem = generateButton
+    
+    let menuButton = UIBarButtonItem(title: "Menu", style: .Plain, target: self, action: "menuTapped")
+    navigationItem.leftBarButtonItem = menuButton
   }
   
   override func viewWillAppear(animated: Bool)  {
@@ -55,10 +59,19 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
     collectionView.reloadData()
   }
   
+  override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    collectionView.reloadData()
+  }
+  
   func generateTapped() {
     let generateController = UIStoryboard(name: "NewSongGenerator", bundle: nil).instantiateInitialViewController() as NewSongGeneratorViewController
     generateController.delegate = self
     navigationController?.pushViewController(generateController, animated: true)
+  }
+  
+  func menuTapped() {
+    let actionSheet = MainMenuProvider.sharedInstance.menuActionSheet()
+    actionSheet.showInView(view)
   }
   
   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -74,6 +87,14 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
     
     let chordMeasure = chords[indexPath.section][indexPath.row]
     cell.textLabel.text = JazzChordFontTextProvider.textFromChordMeasure(chordMeasure)
+    
+    let cellsPerRow = numberOfCellsPerRow()
+    if indexPath.row % cellsPerRow == cellsPerRow - 1 {
+      // Last item in the row, so hide the ending bar
+      cell.measureLine.hidden = true
+    } else {
+      cell.measureLine.hidden = false
+    }
     
     return cell
   }
@@ -104,21 +125,24 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
   // MARK: - Helpers
   
   func cellWidth() -> CGFloat {
+    return collectionView.frame.size.width / CGFloat(numberOfCellsPerRow())
+  }
+  
+  func numberOfCellsPerRow() -> Int {
     var width = collectionView.frame.size.width
-    var divider: CGFloat = 1
+    var divider = 1
     while true {
       divider++
-      let newWidth = collectionView.frame.size.width / divider
+      let newWidth = collectionView.frame.size.width / CGFloat(divider)
       if newWidth < 160 {
-        return width
+        return divider - 1
       }
       width = newWidth
     }
   }
   
-  
   /*
-  MAKR: - Action Methods
+  MARK: - Action Methods
   */
   
   @IBAction func play() {
@@ -145,6 +169,9 @@ class SectionsCollectionViewController: UIViewController, UICollectionViewDataSo
     navigationController?.setNavigationBarHidden(false, animated: true)
     UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
     JukeBox.sharedInstance.stopMusic()
+    
+    // Let's count this as a significant event for review purposes
+    Armchair.userDidSignificantEvent(true)
   }
   
   @IBAction func settingsTapped() {

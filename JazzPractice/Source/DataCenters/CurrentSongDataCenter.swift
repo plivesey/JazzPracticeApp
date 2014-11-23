@@ -14,19 +14,15 @@ class CurrentSongDataCenter {
     // Default
     let sections = MusicGenerator.generateSectionsWithKey(0, numberOfMeasures: 8, numberOfSections: 2)
     return SongData(sections: sections, form: .ABA, repeat: 1)
-  }()
+    }()
   
   class var sharedInstance:CurrentSongDataCenter {
     get {
       struct StaticMusicPlayerContainer {
-        static var instance : CurrentSongDataCenter? = nil
+        static let instance : CurrentSongDataCenter = CurrentSongDataCenter()
       }
       
-      if StaticMusicPlayerContainer.instance == nil {
-        StaticMusicPlayerContainer.instance = CurrentSongDataCenter()
-      }
-      
-      return StaticMusicPlayerContainer.instance!
-  }
+      return StaticMusicPlayerContainer.instance
+    }
   }
 }

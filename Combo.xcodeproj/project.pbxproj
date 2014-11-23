@@ -28,6 +28,16 @@
 		3667CD3F1A1D987A00E8F7A7 /* sax.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD361A1D987A00E8F7A7 /* sax.sf2 */; };
 		3667CD4B1A1D99E100E8F7A7 /* trombone.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD4A1A1D99E100E8F7A7 /* trombone.sf2 */; };
 		3667CD4D1A1D9D1F00E8F7A7 /* JazzMusicGenerator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 364E5B9B1A0933AC00591789 /* JazzMusicGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3667CD4F1A1EEEFD00E8F7A7 /* MainMenuProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667CD4E1A1EEEFD00E8F7A7 /* MainMenuProvider.swift */; };
+		3667CD511A1EF0C300E8F7A7 /* RootViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667CD501A1EF0C300E8F7A7 /* RootViewControllerProvider.swift */; };
+		3667CD541A1EF33100E8F7A7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3667CD531A1EF33100E8F7A7 /* MessageUI.framework */; };
+		3667CD571A1EF72F00E8F7A7 /* GenericScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667CD561A1EF72F00E8F7A7 /* GenericScrollViewController.swift */; };
+		3667CD591A1EF73E00E8F7A7 /* GenericScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD581A1EF73E00E8F7A7 /* GenericScrollViewController.xib */; };
+		3667CD5F1A1EF92200E8F7A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667CD5D1A1EF92200E8F7A7 /* OnboardingViewController.swift */; };
+		3667CD601A1EF92200E8F7A7 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD5E1A1EF92200E8F7A7 /* OnboardingViewController.xib */; };
+		3667CD631A1EFC9800E8F7A7 /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667CD611A1EFC9800E8F7A7 /* AlgorithmViewController.swift */; };
+		3667CD641A1EFC9800E8F7A7 /* AlgorithmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3667CD621A1EFC9800E8F7A7 /* AlgorithmViewController.xib */; };
+		3667CD7E1A22720B00E8F7A7 /* Armchair.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3667CD731A2271C800E8F7A7 /* Armchair.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36E70C1019A6C6FC00DB306D /* NewSongGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C0F19A6C6FC00DB306D /* NewSongGeneratorViewController.swift */; };
 		36E70C1219A6C70C00DB306D /* NewSongGenerator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E70C1119A6C70C00DB306D /* NewSongGenerator.storyboard */; };
 		36E70C1419A907A300DB306D /* SongSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E70C1319A907A300DB306D /* SongSettingsViewController.swift */; };
@@ -66,6 +76,48 @@
 			remoteGlobalIDString = 364E5BD51A093B2B00591789;
 			remoteInfo = JazzMusicGenerator;
 		};
+		3667CD721A2271C800E8F7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6D8B8B519C7274F001AD043;
+			remoteInfo = Armchair;
+		};
+		3667CD741A2271C800E8F7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6D8B8F919C756A4001AD043;
+			remoteInfo = ArmchairMac;
+		};
+		3667CD761A2271C800E8F7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6A0AF6519C9CFF400C3A7DC;
+			remoteInfo = ArmchairLocalizable;
+		};
+		3667CD781A2271C800E8F7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6F6159419C9FFDA00C0B51C;
+			remoteInfo = ArmchairLocalizableMac;
+		};
+		3667CD7A1A2271C800E8F7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6D8B92819C880A9001AD043;
+			remoteInfo = ArmchairTests;
+		};
+		3667CD7C1A2271D400E8F7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Armchair;
+		};
 		36ED66941982D535001D5C10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 36ED66791982D535001D5C10 /* Project object */;
@@ -82,6 +134,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3667CD7E1A22720B00E8F7A7 /* Armchair.framework in CopyFiles */,
 				3667CD4D1A1D9D1F00E8F7A7 /* JazzMusicGenerator.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,15 +162,26 @@
 		3667CD351A1D987A00E8F7A7 /* Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.sf2; sourceTree = "<group>"; };
 		3667CD361A1D987A00E8F7A7 /* sax.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sax.sf2; sourceTree = "<group>"; };
 		3667CD4A1A1D99E100E8F7A7 /* trombone.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trombone.sf2; sourceTree = "<group>"; };
+		3667CD4E1A1EEEFD00E8F7A7 /* MainMenuProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuProvider.swift; sourceTree = "<group>"; };
+		3667CD501A1EF0C300E8F7A7 /* RootViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerProvider.swift; sourceTree = "<group>"; };
+		3667CD531A1EF33100E8F7A7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3667CD561A1EF72F00E8F7A7 /* GenericScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericScrollViewController.swift; sourceTree = "<group>"; };
+		3667CD581A1EF73E00E8F7A7 /* GenericScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenericScrollViewController.xib; sourceTree = "<group>"; };
+		3667CD5D1A1EF92200E8F7A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		3667CD5E1A1EF92200E8F7A7 /* OnboardingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		3667CD611A1EFC9800E8F7A7 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
+		3667CD621A1EFC9800E8F7A7 /* AlgorithmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlgorithmViewController.xib; sourceTree = "<group>"; };
+		3667CD661A21BB4100E8F7A7 /* JazzPracticeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JazzPracticeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Armchair.xcodeproj; path = SwiftSubmodules/Armchair/Armchair.xcodeproj; sourceTree = SOURCE_ROOT; };
 		36E70C0F19A6C6FC00DB306D /* NewSongGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSongGeneratorViewController.swift; sourceTree = "<group>"; };
 		36E70C1119A6C70C00DB306D /* NewSongGenerator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSongGenerator.storyboard; sourceTree = "<group>"; };
 		36E70C1319A907A300DB306D /* SongSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSettingsViewController.swift; sourceTree = "<group>"; };
 		36E70C1519A907AE00DB306D /* SongSettings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SongSettings.storyboard; sourceTree = "<group>"; };
 		36E70C1819A907E400DB306D /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
-		36ED66811982D535001D5C10 /* JazzPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36ED66811982D535001D5C10 /* Combo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ED66851982D535001D5C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36ED668D1982D535001D5C10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		36ED66931982D535001D5C10 /* JazzPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazzPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36ED66931982D535001D5C10 /* ComboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ED66981982D535001D5C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36ED66991982D535001D5C10 /* JazzPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazzPracticeTests.swift; sourceTree = "<group>"; };
 		36ED66A91982D6FD001D5C10 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3667CD541A1EF33100E8F7A7 /* MessageUI.framework in Frameworks */,
 				189A5997881C46C0A31EA7CC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +259,38 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3667CD551A1EF6EE00E8F7A7 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				3667CD561A1EF72F00E8F7A7 /* GenericScrollViewController.swift */,
+				3667CD581A1EF73E00E8F7A7 /* GenericScrollViewController.xib */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		3667CD5C1A1EF91800E8F7A7 /* MainMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3667CD5D1A1EF92200E8F7A7 /* OnboardingViewController.swift */,
+				3667CD5E1A1EF92200E8F7A7 /* OnboardingViewController.xib */,
+				3667CD611A1EFC9800E8F7A7 /* AlgorithmViewController.swift */,
+				3667CD621A1EFC9800E8F7A7 /* AlgorithmViewController.xib */,
+			);
+			path = MainMenuViewController;
+			sourceTree = "<group>";
+		};
+		3667CD6B1A2271C800E8F7A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3667CD731A2271C800E8F7A7 /* Armchair.framework */,
+				3667CD751A2271C800E8F7A7 /* Armchair.framework */,
+				3667CD771A2271C800E8F7A7 /* Armchair.bundle */,
+				3667CD791A2271C800E8F7A7 /* Armchair.bundle */,
+				3667CD7B1A2271C800E8F7A7 /* ArmchairTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		36E70C1719A907C400DB306D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,8 +313,8 @@
 		36ED66821982D535001D5C10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36ED66811982D535001D5C10 /* JazzPractice.app */,
-				36ED66931982D535001D5C10 /* JazzPracticeTests.xctest */,
+				36ED66811982D535001D5C10 /* Combo.app */,
+				36ED66931982D535001D5C10 /* ComboTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				364E5B951A0933AC00591789 /* JazzMusicGenerator.xcodeproj */,
+				3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */,
 				36ED66A31982D697001D5C10 /* Source */,
 				36ED668D1982D535001D5C10 /* Images.xcassets */,
 				3667CD131A1D7FD300E8F7A7 /* Resources */,
@@ -266,6 +364,8 @@
 				363B91111982F50200E09133 /* CollectionViewCells */,
 				36ED67221982DE91001D5C10 /* DataCenters */,
 				36ED66AA1982D6FD001D5C10 /* EditingViewControllers */,
+				3667CD551A1EF6EE00E8F7A7 /* Generic */,
+				3667CD5C1A1EF91800E8F7A7 /* MainMenuViewController */,
 				36ED671C1982DBB6001D5C10 /* MusicGenerator */,
 				363B910C1982F46000E09133 /* PlayingViewControllers */,
 				36E70C1719A907C400DB306D /* Utils */,
@@ -277,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				36ED66A91982D6FD001D5C10 /* AppDelegate.swift */,
+				3667CD661A21BB4100E8F7A7 /* JazzPracticeTests-Bridging-Header.h */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -314,6 +415,8 @@
 			children = (
 				36ED67231982DE99001D5C10 /* CurrentSongDataCenter.swift */,
 				3667CD171A1D820200E8F7A7 /* JazzChordFontTextProvider.swift */,
+				3667CD4E1A1EEEFD00E8F7A7 /* MainMenuProvider.swift */,
+				3667CD501A1EF0C300E8F7A7 /* RootViewControllerProvider.swift */,
 			);
 			path = DataCenters;
 			sourceTree = "<group>";
@@ -330,6 +433,7 @@
 		CCADC81EA03F42E5804B3290 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3667CD531A1EF33100E8F7A7 /* MessageUI.framework */,
 				6684E807DFB3424EAB2B204A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -338,9 +442,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36ED66801982D535001D5C10 /* JazzPractice */ = {
+		36ED66801982D535001D5C10 /* Combo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36ED669D1982D535001D5C10 /* Build configuration list for PBXNativeTarget "JazzPractice" */;
+			buildConfigurationList = 36ED669D1982D535001D5C10 /* Build configuration list for PBXNativeTarget "Combo" */;
 			buildPhases = (
 				0D334ED316B4481FAD3F7100 /* Check Pods Manifest.lock */,
 				36ED667D1982D535001D5C10 /* Sources */,
@@ -348,20 +452,22 @@
 				36ED667F1982D535001D5C10 /* Resources */,
 				E4600BF993EB45F8B2D22317 /* Copy Pods Resources */,
 				3667CD4C1A1D9CDB00E8F7A7 /* CopyFiles */,
+				3667CD811A2272A400E8F7A7 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3667CD7D1A2271D400E8F7A7 /* PBXTargetDependency */,
 				364E5CA01A093CFE00591789 /* PBXTargetDependency */,
 			);
-			name = JazzPractice;
+			name = Combo;
 			productName = JazzPractice;
-			productReference = 36ED66811982D535001D5C10 /* JazzPractice.app */;
+			productReference = 36ED66811982D535001D5C10 /* Combo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		36ED66921982D535001D5C10 /* JazzPracticeTests */ = {
+		36ED66921982D535001D5C10 /* ComboTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36ED66A01982D535001D5C10 /* Build configuration list for PBXNativeTarget "JazzPracticeTests" */;
+			buildConfigurationList = 36ED66A01982D535001D5C10 /* Build configuration list for PBXNativeTarget "ComboTests" */;
 			buildPhases = (
 				36ED668F1982D535001D5C10 /* Sources */,
 				36ED66901982D535001D5C10 /* Frameworks */,
@@ -372,9 +478,9 @@
 			dependencies = (
 				36ED66951982D535001D5C10 /* PBXTargetDependency */,
 			);
-			name = JazzPracticeTests;
+			name = ComboTests;
 			productName = JazzPracticeTests;
-			productReference = 36ED66931982D535001D5C10 /* JazzPracticeTests.xctest */;
+			productReference = 36ED66931982D535001D5C10 /* ComboTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -395,7 +501,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 36ED667C1982D535001D5C10 /* Build configuration list for PBXProject "JazzPractice" */;
+			buildConfigurationList = 36ED667C1982D535001D5C10 /* Build configuration list for PBXProject "Combo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -408,14 +514,18 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 3667CD6B1A2271C800E8F7A7 /* Products */;
+					ProjectRef = 3667CD6A1A2271C800E8F7A7 /* Armchair.xcodeproj */;
+				},
+				{
 					ProductGroup = 364E5B961A0933AC00591789 /* Products */;
 					ProjectRef = 364E5B951A0933AC00591789 /* JazzMusicGenerator.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				36ED66801982D535001D5C10 /* JazzPractice */,
-				36ED66921982D535001D5C10 /* JazzPracticeTests */,
+				36ED66801982D535001D5C10 /* Combo */,
+				36ED66921982D535001D5C10 /* ComboTests */,
 			);
 		};
 /* End PBXProject section */
@@ -435,6 +545,41 @@
 			remoteRef = 364E5B9C1A0933AC00591789 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3667CD731A2271C800E8F7A7 /* Armchair.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Armchair.framework;
+			remoteRef = 3667CD721A2271C800E8F7A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3667CD751A2271C800E8F7A7 /* Armchair.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Armchair.framework;
+			remoteRef = 3667CD741A2271C800E8F7A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3667CD771A2271C800E8F7A7 /* Armchair.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Armchair.bundle;
+			remoteRef = 3667CD761A2271C800E8F7A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3667CD791A2271C800E8F7A7 /* Armchair.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Armchair.bundle;
+			remoteRef = 3667CD781A2271C800E8F7A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3667CD7B1A2271C800E8F7A7 /* ArmchairTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ArmchairTests.xctest;
+			remoteRef = 3667CD7A1A2271C800E8F7A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -447,7 +592,10 @@
 				3667CD4B1A1D99E100E8F7A7 /* trombone.sf2 in Resources */,
 				362A84641A143C4F00A41EE0 /* ChordSectionHeader.xib in Resources */,
 				36ED668E1982D535001D5C10 /* Images.xcassets in Resources */,
+				3667CD601A1EF92200E8F7A7 /* OnboardingViewController.xib in Resources */,
+				3667CD591A1EF73E00E8F7A7 /* GenericScrollViewController.xib in Resources */,
 				363B91131982F51100E09133 /* ChordCell.xib in Resources */,
+				3667CD641A1EFC9800E8F7A7 /* AlgorithmViewController.xib in Resources */,
 				3667CD3E1A1D987A00E8F7A7 /* Piano.sf2 in Resources */,
 				3667CD3F1A1D987A00E8F7A7 /* sax.sf2 in Resources */,
 				3667CD3C1A1D987A00E8F7A7 /* jazzGuitar.sf2 in Resources */,
@@ -486,6 +634,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		3667CD811A2272A400E8F7A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Pods/CrashlyticsFramework/Crashlytics.framework/run a2525f75879917ec4cffeeb16345f5aa9bbbeaeb 6d415a6edaa74a4699f80f3ce5b6fa514da118e04c5e517c305fdeec761f1910";
+		};
 		E4600BF993EB45F8B2D22317 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,16 +673,21 @@
 				36ED67201982DD07001D5C10 /* SongSection.swift in Sources */,
 				36ED66AB1982D6FD001D5C10 /* AppDelegate.swift in Sources */,
 				36ED67261982E1DD001D5C10 /* JukeBox.swift in Sources */,
+				3667CD631A1EFC9800E8F7A7 /* AlgorithmViewController.swift in Sources */,
+				3667CD571A1EF72F00E8F7A7 /* GenericScrollViewController.swift in Sources */,
 				363B910E1982F46B00E09133 /* SheetMusicViewController.swift in Sources */,
 				36266E881A01BA0400AB66D0 /* SongForm.swift in Sources */,
+				3667CD5F1A1EF92200E8F7A7 /* OnboardingViewController.swift in Sources */,
 				363B9119198314DB00E09133 /* ChordsViewController.swift in Sources */,
 				362A84671A143D9C00A41EE0 /* ChordSectionHeader.swift in Sources */,
 				36E70C1919A907E400DB306D /* UIUtils.swift in Sources */,
 				36E70C1419A907A300DB306D /* SongSettingsViewController.swift in Sources */,
 				36ED66AE1982D9D3001D5C10 /* SectionsCollectionViewController.swift in Sources */,
 				363B91151982F61100E09133 /* ChordCell.swift in Sources */,
+				3667CD511A1EF0C300E8F7A7 /* RootViewControllerProvider.swift in Sources */,
 				36ED671E1982DBF7001D5C10 /* MusicGenerator.swift in Sources */,
 				363B911B198314F200E09133 /* SingleChordViewController.swift in Sources */,
+				3667CD4F1A1EEEFD00E8F7A7 /* MainMenuProvider.swift in Sources */,
 				36E70C1019A6C6FC00DB306D /* NewSongGeneratorViewController.swift in Sources */,
 				36ED67241982DE99001D5C10 /* CurrentSongDataCenter.swift in Sources */,
 			);
@@ -543,9 +709,14 @@
 			name = JazzMusicGenerator;
 			targetProxy = 364E5C9F1A093CFE00591789 /* PBXContainerItemProxy */;
 		};
+		3667CD7D1A2271D400E8F7A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Armchair;
+			targetProxy = 3667CD7C1A2271D400E8F7A7 /* PBXContainerItemProxy */;
+		};
 		36ED66951982D535001D5C10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 36ED66801982D535001D5C10 /* JazzPractice */;
+			target = 36ED66801982D535001D5C10 /* Combo */;
 			targetProxy = 36ED66941982D535001D5C10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -636,10 +807,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JazzPractice/Source/Utils",
+				);
 				INFOPLIST_FILE = JazzPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "~/Repo/TestAudio/**";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Combo;
 			};
 			name = Debug;
 		};
@@ -649,10 +824,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JazzPractice/Source/Utils",
+				);
 				INFOPLIST_FILE = JazzPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "~/Repo/TestAudio/**";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Combo;
 			};
 			name = Release;
 		};
@@ -660,6 +839,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JazzPractice.app/JazzPractice";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -670,7 +850,9 @@
 				);
 				INFOPLIST_FILE = JazzPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ComboTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "JazzPractice/Source/AppDelegate/JazzPracticeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -679,13 +861,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JazzPractice.app/JazzPractice";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = JazzPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ComboTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "JazzPractice/Source/AppDelegate/JazzPracticeTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -693,7 +877,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36ED667C1982D535001D5C10 /* Build configuration list for PBXProject "JazzPractice" */ = {
+		36ED667C1982D535001D5C10 /* Build configuration list for PBXProject "Combo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36ED669B1982D535001D5C10 /* Debug */,
@@ -702,7 +886,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36ED669D1982D535001D5C10 /* Build configuration list for PBXNativeTarget "JazzPractice" */ = {
+		36ED669D1982D535001D5C10 /* Build configuration list for PBXNativeTarget "Combo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36ED669E1982D535001D5C10 /* Debug */,
@@ -711,7 +895,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36ED66A01982D535001D5C10 /* Build configuration list for PBXNativeTarget "JazzPracticeTests" */ = {
+		36ED66A01982D535001D5C10 /* Build configuration list for PBXNativeTarget "ComboTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36ED66A11982D535001D5C10 /* Debug */,

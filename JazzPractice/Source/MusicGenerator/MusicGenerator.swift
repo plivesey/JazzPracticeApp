@@ -41,13 +41,13 @@ class MusicGenerator {
 //      }
       
       // DEBUG. Print out the bassline.
-      for i in 0..<chords.count {
-        print(chords[i])
-        let bass: [String] = bassline[i].notes.map { note in
-          return MusicUtil.noteToString(note.note)
-        }
-        println("   \(bass)")
-      }
+//      for i in 0..<chords.count {
+//        print(chords[i])
+//        let bass: [String] = bassline[i].notes.map { note in
+//          return MusicUtil.noteToString(note.note)
+//        }
+//        println("   \(bass)")
+//      }
       
       sections.append(SongSection(chords: chords, melody: melody, rhythm: rhythm, bass: bassline, drums: drums))
     }

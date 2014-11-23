@@ -1,2 +1,2 @@
-pod 'Isaac'
+pod 'CrashlyticsFramework'
 

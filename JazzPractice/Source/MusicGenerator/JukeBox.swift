@@ -21,7 +21,6 @@ class JukeBox {
     stopMusic()
     
     let initialScore: [PLMusicPlayerNote] = []
-    var currentStart: Float = 0
     
     let oneRepeatSections: [SongSection] = {
       switch song.form {
@@ -38,10 +37,18 @@ class JukeBox {
       }
       }()
     
-    var sections = [SongSection]()
+    let startSection: SongSection = {
+      let startingChord = song.sections[0].chords[0]
+      let drums = DrumGenerator.generateDrumsPlayIn()
+      return SongSection(chords: [startingChord, startingChord], melody: [], rhythm: [], bass: [], drums: drums)
+    }()
+
+    var sections = [startSection]
     for _ in 0..<song.repeat {
       sections.extend(oneRepeatSections)
     }
+    
+    var currentStart: Float = 0
     
     let endingSection: SongSection = {
       let endingChord = song.sections[0].chords[0]
@@ -55,6 +62,8 @@ class JukeBox {
     }()
     
     sections.append(endingSection)
+    
+    var isPlayIn = true
     
     let scores: [[PLMusicPlayerNote]] = sections.map {
       section in
@@ -73,9 +82,12 @@ class JukeBox {
         instruments.append(ScoreCreator.instrumentScore(section.bass, instrumentTypes[2], 72))
       }
       // Drums
-      if !muted[3] {
+      if !muted[3] || isPlayIn {
         instruments.append(ScoreCreator.instrumentScore(section.drums, instrumentTypes[3], 50))
       }
+      
+      // After first time, it's not the play in anymore
+      isPlayIn = false
       
       let fromZero = ScoreCreator.createScore(instruments, secondsPerBeat: secondsPerBeat)
       let adjusted: [PLMusicPlayerNote] = fromZero.map {

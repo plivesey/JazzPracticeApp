@@ -1,10 +1,10 @@
 PODS:
-  - Isaac (1.3.0)
+  - CrashlyticsFramework (2.2.5.1)
 
 DEPENDENCIES:
-  - Isaac
+  - CrashlyticsFramework
 
 SPEC CHECKSUMS:
-  Isaac: 6e345723a54229b27006ed5d1c7226ed2dbaf420
+  CrashlyticsFramework: 195dfef587ade7a3954ce8effd483a3879d35877
 
 COCOAPODS: 0.35.0

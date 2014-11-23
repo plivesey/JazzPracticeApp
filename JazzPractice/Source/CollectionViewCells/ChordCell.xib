@@ -46,6 +46,7 @@
             </constraints>
             <size key="customSize" width="344" height="60"/>
             <connections>
+                <outlet property="measureLine" destination="D9u-Em-ZuO" id="gna-Lb-rlw"/>
                 <outlet property="textLabel" destination="CjH-zr-tgn" id="Jjd-TE-UgR"/>
             </connections>
             <point key="canvasLocation" x="379" y="204"/>

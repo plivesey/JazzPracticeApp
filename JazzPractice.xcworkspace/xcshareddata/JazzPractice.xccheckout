@@ -12,6 +12,8 @@
 	<dict>
 		<key>4A648ADD0BF3F13C2D68053572B7AA3738F861FB</key>
 		<string>https://github.com/plivesey/JazzPracticeApp.git</string>
+		<key>6094D9F4198D56F78EB1B455EC894F8A44DC0039</key>
+		<string>https://github.com/UrbanApps/Armchair.git</string>
 		<key>BBC80F4EC6F3E16AA517B90A65B79E7E86C25A4A</key>
 		<string>https://github.com/plivesey/JazzMusicGenerator.git</string>
 	</dict>
@@ -21,6 +23,8 @@
 	<dict>
 		<key>4A648ADD0BF3F13C2D68053572B7AA3738F861FB</key>
 		<string>..</string>
+		<key>6094D9F4198D56F78EB1B455EC894F8A44DC0039</key>
+		<string>../SwiftSubmodules/Armchair/</string>
 		<key>BBC80F4EC6F3E16AA517B90A65B79E7E86C25A4A</key>
 		<string>../../Desktop/TestAudio</string>
 	</dict>
@@ -32,6 +36,14 @@
 	<string>4A648ADD0BF3F13C2D68053572B7AA3738F861FB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6094D9F4198D56F78EB1B455EC894F8A44DC0039</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Armchair</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
