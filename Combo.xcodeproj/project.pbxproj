@@ -11,6 +11,7 @@
 		36266E881A01BA0400AB66D0 /* SongForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36266E871A01BA0400AB66D0 /* SongForm.swift */; };
 		362A84641A143C4F00A41EE0 /* ChordSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362A84631A143C4F00A41EE0 /* ChordSectionHeader.xib */; };
 		362A84671A143D9C00A41EE0 /* ChordSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362A84661A143D9C00A41EE0 /* ChordSectionHeader.swift */; };
+		363153B61A2410C100945DF8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363153B51A2410C100945DF8 /* LaunchScreen.xib */; };
 		363B910E1982F46B00E09133 /* SheetMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B910D1982F46B00E09133 /* SheetMusicViewController.swift */; };
 		363B91101982F47600E09133 /* SheetMusicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */; };
 		363B91131982F51100E09133 /* ChordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363B91121982F51100E09133 /* ChordCell.xib */; };
@@ -145,6 +146,7 @@
 		36266E871A01BA0400AB66D0 /* SongForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongForm.swift; sourceTree = "<group>"; };
 		362A84631A143C4F00A41EE0 /* ChordSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordSectionHeader.xib; sourceTree = "<group>"; };
 		362A84661A143D9C00A41EE0 /* ChordSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordSectionHeader.swift; sourceTree = "<group>"; };
+		363153B51A2410C100945DF8 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		363B910D1982F46B00E09133 /* SheetMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetMusicViewController.swift; sourceTree = "<group>"; };
 		363B910F1982F47600E09133 /* SheetMusicViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetMusicViewController.storyboard; sourceTree = "<group>"; };
 		363B91121982F51100E09133 /* ChordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordCell.xib; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			children = (
 				36ED66A91982D6FD001D5C10 /* AppDelegate.swift */,
 				3667CD661A21BB4100E8F7A7 /* JazzPracticeTests-Bridging-Header.h */,
+				363153B51A2410C100945DF8 /* LaunchScreen.xib */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363153B61A2410C100945DF8 /* LaunchScreen.xib in Resources */,
 				363B911D198314FE00E09133 /* ChordsViewController.storyboard in Resources */,
 				3667CD391A1D987A00E8F7A7 /* drums.sf2 in Resources */,
 				3667CD4B1A1D99E100E8F7A7 /* trombone.sf2 in Resources */,

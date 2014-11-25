@@ -8,7 +8,7 @@
         <!--Song Settings View Controller-->
         <scene sceneID="r34-62-PXe">
             <objects>
-                <viewController id="PmM-qx-ncM" customClass="SongSettingsViewController" customModule="JazzPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PmM-qx-ncM" customClass="SongSettingsViewController" customModule="Combo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uk4-WF-6mg"/>
                         <viewControllerLayoutGuide type="bottom" id="Rm4-hc-OPF"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6V-So-iay">
-                                <rect key="frame" x="0.0" y="54" width="600" height="162"/>
+                                <rect key="frame" x="16" y="66" width="568" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="KdV-pf-cTT"/>
                                 </constraints>
@@ -28,16 +28,27 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEE-Zb-2yd">
-                                <rect key="frame" x="16" y="20" width="568" height="26"/>
+                                <rect key="frame" x="16" y="20" width="568" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="pRc-Yl-DzJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="HCj-HO-Tdo"/>
+                                    <constraint firstAttribute="height" constant="32" id="pRc-Yl-DzJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HCj-HO-Tdo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="HCj-HO-Tdo"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruments/Mute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-sq-WM4">
-                                <rect key="frame" x="16" y="224" width="568" height="36"/>
+                                <rect key="frame" x="16" y="236" width="568" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="5tP-1Z-zko"/>
                                 </constraints>
@@ -46,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXz-EW-uOX" userLabel="Container">
-                                <rect key="frame" x="16" y="268" width="568" height="170"/>
+                                <rect key="frame" x="16" y="280" width="568" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melody" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-rL-3g0">
                                         <rect key="frame" x="0.0" y="0.0" width="99" height="30"/>
@@ -95,7 +106,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                         <state key="normal" title="Piano">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -109,7 +119,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                         <state key="normal" title="Piano">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -212,7 +221,6 @@
                                     <constraint firstItem="ID0-Y8-LnD" firstAttribute="top" secondItem="own-j1-MoA" secondAttribute="bottom" constant="10" id="QAK-A2-xJr"/>
                                     <constraint firstItem="cSJ-Fy-P8V" firstAttribute="leading" secondItem="kXz-EW-uOX" secondAttribute="leading" id="Qrg-w9-Sye"/>
                                     <constraint firstItem="own-j1-MoA" firstAttribute="leading" secondItem="kXz-EW-uOX" secondAttribute="leading" id="Rhe-Oe-nrV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="SH0-0Y-Gt9"/>
                                     <constraint firstItem="b2d-Rf-3bx" firstAttribute="top" secondItem="LDB-kf-VXv" secondAttribute="bottom" constant="10" id="SpM-DI-hZa"/>
                                     <constraint firstItem="b2d-Rf-3bx" firstAttribute="leading" secondItem="own-j1-MoA" secondAttribute="trailing" constant="8" id="TkH-vO-dBp"/>
                                     <constraint firstItem="ID0-Y8-LnD" firstAttribute="leading" secondItem="kXz-EW-uOX" secondAttribute="leading" id="VJf-GC-Ncd"/>
@@ -232,23 +240,40 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Q6V-So-iay" firstAttribute="leading" secondItem="gEE-Zb-2yd" secondAttribute="leading" id="17b-i9-d4Z"/>
                             <constraint firstItem="cFV-sq-WM4" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" id="92m-ER-f8S"/>
+                            <constraint firstItem="cFV-sq-WM4" firstAttribute="leading" secondItem="gEE-Zb-2yd" secondAttribute="trailing" constant="10" id="B1W-GH-Krw"/>
                             <constraint firstItem="gEE-Zb-2yd" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" id="Buj-V3-bn4"/>
                             <constraint firstItem="gEE-Zb-2yd" firstAttribute="top" secondItem="uk4-WF-6mg" secondAttribute="bottom" id="G9m-5J-cg0"/>
-                            <constraint firstItem="cFV-sq-WM4" firstAttribute="top" secondItem="Q6V-So-iay" secondAttribute="bottom" constant="8" id="GPa-j5-xY6"/>
-                            <constraint firstItem="Q6V-So-iay" firstAttribute="top" secondItem="gEE-Zb-2yd" secondAttribute="bottom" constant="8" id="Kd2-M5-lW2"/>
+                            <constraint firstItem="kXz-EW-uOX" firstAttribute="leading" secondItem="cFV-sq-WM4" secondAttribute="leading" id="Hrj-Sh-bEu"/>
                             <constraint firstItem="kXz-EW-uOX" firstAttribute="top" secondItem="cFV-sq-WM4" secondAttribute="bottom" constant="8" id="OCR-Q2-U3u"/>
+                            <constraint firstItem="Q6V-So-iay" firstAttribute="width" secondItem="gEE-Zb-2yd" secondAttribute="width" id="OE7-eL-oIB"/>
                             <constraint firstItem="cFV-sq-WM4" firstAttribute="top" secondItem="Q6V-So-iay" secondAttribute="bottom" constant="8" id="Sia-oO-rnP"/>
                             <constraint firstItem="kXz-EW-uOX" firstAttribute="trailing" secondItem="bmP-aW-OkK" secondAttribute="trailingMargin" id="V0w-rr-y2l"/>
-                            <constraint firstItem="kXz-EW-uOX" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" id="X47-5Q-mr3"/>
-                            <constraint firstItem="Q6V-So-iay" firstAttribute="top" secondItem="gEE-Zb-2yd" secondAttribute="bottom" constant="8" id="cmd-yb-sWm"/>
-                            <constraint firstItem="Q6V-So-iay" firstAttribute="leading" secondItem="bmP-aW-OkK" secondAttribute="leadingMargin" constant="-16" id="ex2-nO-BnK"/>
+                            <constraint firstItem="Q6V-So-iay" firstAttribute="top" secondItem="gEE-Zb-2yd" secondAttribute="bottom" constant="14" id="cmd-yb-sWm"/>
                             <constraint firstItem="gEE-Zb-2yd" firstAttribute="trailing" secondItem="bmP-aW-OkK" secondAttribute="trailingMargin" id="fWu-si-Vaq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Q6V-So-iay" secondAttribute="trailing" constant="-16" id="ud2-4o-U27"/>
+                            <constraint firstItem="cFV-sq-WM4" firstAttribute="top" secondItem="uk4-WF-6mg" secondAttribute="bottom" id="t30-rM-bok"/>
                             <constraint firstItem="cFV-sq-WM4" firstAttribute="trailing" secondItem="bmP-aW-OkK" secondAttribute="trailingMargin" id="xSL-gX-ucL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B1W-GH-Krw"/>
+                                <exclude reference="t30-rM-bok"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="fWu-si-Vaq"/>
+                                <include reference="OE7-eL-oIB"/>
+                                <exclude reference="92m-ER-f8S"/>
+                                <include reference="B1W-GH-Krw"/>
+                                <exclude reference="Sia-oO-rnP"/>
+                                <include reference="t30-rM-bok"/>
+                                <include reference="Hrj-Sh-bEu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bassMuteButton" destination="W6c-Zw-xL2" id="43S-Nf-fXr"/>
@@ -262,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8V-gT-Qbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="295"/>
+            <point key="canvasLocation" x="37" y="341"/>
         </scene>
     </scenes>
     <resources>

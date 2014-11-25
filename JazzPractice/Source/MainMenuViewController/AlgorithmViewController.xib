@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlgorithmViewController" customModule="JazzPractice" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlgorithmViewController" customModule="Combo" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,7 +17,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-7D-YOl">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">Overview
+                    <string key="text">Overview
 
 The algorithm for generating the music in the app is a custom algorithm written for this app.
 
@@ -45,7 +45,7 @@ Currently, the drums are incredibly simple. The just play the same measure on re
 
 Get In Touch
 
-If you're interested in more about the algorithm, get in touch. You can send me an email with the feedback option in the menu.</mutableString>
+If you're interested in more about the algorithm, get in touch. You can send me an email with the feedback option in the menu.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>

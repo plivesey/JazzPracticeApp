@@ -1,0 +1,9 @@
+COLORS
+
+Background
+
+#79A2B0
+
+Bass
+
+255 - 117 - 5

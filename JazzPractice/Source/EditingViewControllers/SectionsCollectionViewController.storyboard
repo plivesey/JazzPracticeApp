@@ -8,7 +8,7 @@
         <!--Sections Collection View Controller-->
         <scene sceneID="WOf-DK-pdm">
             <objects>
-                <viewController id="Wna-3b-8Jc" customClass="SectionsCollectionViewController" customModule="JazzPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wna-3b-8Jc" customClass="SectionsCollectionViewController" customModule="Combo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AVf-ve-GFQ"/>
                         <viewControllerLayoutGuide type="bottom" id="0Cj-Kx-TRw"/>
